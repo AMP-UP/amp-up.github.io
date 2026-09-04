@@ -1,0 +1,14 @@
+# applicant
+name = "Charlotte Mason"
+year = "2018"
+flavor = "Hubble"
+institution_phd = "TODO look up"
+institution_host = "TODO look up"
+
+# application
+title = "Revolutionizing Reionization with JWST"
+science_category = "Galaxies and the Intergalactic Medium"
+abstract = '''
+How and when did the first stars and galaxies form? The Reionization of intergalactic hydrogen in the universe’s first billion years was driven by the first sources of light; so its timeline encodes information about their properties, but it is not well-measured. I will develop modeling frameworks for galaxies at our observational frontiers to measure the timeline of reionization at $z>7$ for the first time, and infer properties of the earliest galaxies. My state-of-the-art models provide critical tools needed to interpret upcoming JWST observations, enabling us to ask fundamental questions about galaxy formation in the early universe.
+'''
+url = "TODO new upload"

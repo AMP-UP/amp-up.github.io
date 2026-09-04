@@ -1,0 +1,12 @@
+# applicant
+name = "Sultan Hassan"
+year = "2022"
+flavor = "Hubble"
+institution_phd = "University of the Western Cape"
+institution_host = "TODO look up"
+
+# application
+title = "Illuminating the Primeval Universe with Lyman$\\alpha$"
+science_category = "Galaxies and the Intergalactic Medium"
+abstract = nan
+url = "TODO good version"

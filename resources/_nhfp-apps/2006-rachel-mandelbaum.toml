@@ -1,0 +1,12 @@
+# applicant
+name = "Rachel Mandelbaum"
+year = "2006"
+flavor = "Hubble"
+institution_phd = "Princeton University"
+institution_host = "Institute for Advanced Study"
+
+# application
+title = "Understanding the universe with weak lensing"
+science_category = "Physics and Cosmology"
+abstract = nan
+url = "TBD good version"

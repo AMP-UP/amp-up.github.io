@@ -1,0 +1,14 @@
+# applicant
+name = "Jamie Tayar"
+year = "2018"
+flavor = "Hubble"
+institution_phd = "Ohio State University"
+institution_host = "TODO look up"
+
+# application
+title = "Subgiants: Models, Rotation, Convection, and Planets"
+science_category = "Stellar Physics"
+abstract = '''
+Stellar models are the pillars of many areas of astrophysics and make a rich web of predictions for the properties and evolution of stars. While these models perform well for stars like our sun, important inconsistencies have been identified in other regimes. With the launch of the TESS satellite next year, in combination with Gaia data and ground based spectroscopy, there will finally be a large sample of stars with measured masses, radii, surface gravities, temperatures, metallicities, core and surface rotation rates, granulation and macroturbulence, which can be used to improve stellar models and therefore the inferences drawn from them.  Specifically, I will use this sample to calibrate the masses and radii of stellar models, and better our understanding of stellar evolution, especially the physics of rotation and convection. This work will also improve the measured masses, radii, and ages of planets, provide insight into which stars are most likely to have detectable planets, and improve estimates of the planet distribution as a function of stellar mass and metallicity. In short, this work will improve both our understanding of our own cosmic origins, and our ability to study planetary systems outside our own.
+'''
+url = "TODO good version"

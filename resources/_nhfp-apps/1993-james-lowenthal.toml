@@ -1,0 +1,14 @@
+# applicant
+name = "James Lowenthal"
+year = "1993"
+flavor = "Hubble"
+institution_phd = "University of Arizona"
+institution_host = "University of California, Santa Cruz"
+
+# application
+title = "Galaxies and the Intergalactic Medium"
+science_category = "Starburst Galaxies at $z<1$"
+abstract = '''
+I propose to obtain deep optical images and spectroscopic redshifts of a sample of $\mu$Jy extragalactic sources discovered at 8.44 GHz with the VLA. Previous studies have shown that such faint radio surveys are probably dominated by actively starforming galaxies at $z\sim0.5$, and that there is a tight correlation between the radio and mid-IR characteristics of most galaxies; detailed optical and near-IR observations will thus elucidate the nature and evolution of starburst galaxies at cosmological lookback times, extending by an order of magnitude the regime sampled by IRAS and complementing existing optically-selected faint galaxy surveys.
+'''
+url = "https://drive.google.com/file/d/1tUVYJVFndyPUkIXPU5bWtmKUdrvKHnEF/view"

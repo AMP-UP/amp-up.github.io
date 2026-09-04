@@ -1,0 +1,12 @@
+# applicant
+name = "Johanna Teske"
+year = "2017"
+flavor = "Hubble"
+institution_phd = "University of Arizona"
+institution_host = "Carnegie Institution TODO what is this???"
+
+# application
+title = "Characterizing the Diversity of Small Planet Compositions via Planet Densities and Host Star Abundances"
+science_category = "Exoplanets and Habitability"
+abstract = nan
+url = "TODO good version"

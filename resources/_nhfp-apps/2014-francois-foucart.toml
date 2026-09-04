@@ -1,0 +1,12 @@
+# applicant
+name = "Francois Foucart"
+year = "2014"
+flavor = "Einstein"
+institution_phd = "Cornell University"
+institution_host = "TBD look up"
+
+# application
+title = "Simulating compact binary mergers for multi-messenger astronomy"
+science_category = "Compact Objects and Accretion"
+abstract = nan
+url = "TBD good version"

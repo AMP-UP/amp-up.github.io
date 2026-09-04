@@ -1,0 +1,12 @@
+# applicant
+name = "James Owen"
+year = "2014"
+flavor = "Hubble"
+institution_phd = "University of Cambridge"
+institution_host = "Institute for Advanced Study"
+
+# application
+title = "Formation and evolution of exoplanets"
+science_category = "Exoplanet Formation and Protoplanetary Disks"
+abstract = nan
+url = "TBD new upload"

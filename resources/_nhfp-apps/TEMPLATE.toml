@@ -1,0 +1,14 @@
+# applicant
+name = "Vera Rubin"
+year = "1987"
+flavor = "Hubble"
+institution_phd = ""
+institution_host = ""
+
+# application
+title = "Outer-Space Basket Weaving"
+science_category = "Interstellar Navel Gazing"
+abstract = '''
+This is the best application to ever exist.
+'''
+url = "skynet.org"

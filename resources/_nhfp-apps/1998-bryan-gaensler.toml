@@ -1,0 +1,12 @@
+# applicant
+name = "Bryan Gaensler"
+year = "1998"
+flavor = "Hubble"
+institution_phd = "University of Sydney"
+institution_host = "Massachusetts Institute of Technology"
+
+# application
+title = "Born with a Band: Neutron Stars and their Origins"
+science_category = "Compact Objects and Accretion"
+abstract = nan
+url = "TBD fine as is"

@@ -1,0 +1,12 @@
+# applicant
+name = "Diana Dragomir"
+year = "2016"
+flavor = "Hubble"
+institution_phd = "University of British Columbia"
+institution_host = "Massachusetts Institute of Technology"
+
+# application
+title = "Characterizing Small Planets Around Bright Stars"
+science_category = "Exoplanets and Habitability"
+abstract = nan
+url = "TODO new upload"

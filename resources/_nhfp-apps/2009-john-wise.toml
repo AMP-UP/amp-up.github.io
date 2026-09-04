@@ -1,0 +1,12 @@
+# applicant
+name = "John Wise"
+year = "2009"
+flavor = "Hubble"
+institution_phd = "Stanford University"
+institution_host = "Princeton University"
+
+# application
+title = "Ab Initio Dwarf Galaxy Formation – Predictions for JWST and ALMA"
+science_category = "Galaxies and the Intergalactic Medium"
+abstract = nan
+url = "TBD good version"

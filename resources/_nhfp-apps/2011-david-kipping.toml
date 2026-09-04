@@ -1,0 +1,12 @@
+# applicant
+name = "David Kipping"
+year = "2011"
+flavor = "Sagan"
+institution_phd = "TBD look up"
+institution_host = "TBD look up"
+
+# application
+title = "A Search for Exomoons"
+science_category = "Exoplanets and Habitability"
+abstract = nan
+url = "TBD good version"

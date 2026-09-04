@@ -1,0 +1,14 @@
+# applicant
+name = "Kate Follette"
+year = "2016"
+flavor = "Sagan"
+institution_phd = "University of Arizona"
+institution_host = "TODO look up"
+
+# application
+title = "Finding and Characterizing Forming Protoplanets with Next Generation Adaptive Optics Systems"
+science_category = "Exoplanet Formation and Protoplanetary Disks"
+abstract = '''
+This proposal addresses several key questions in planet formation theory and takes advantage of spatial resolution, inner working angle and stability regimes that have never before been available to complete a survey for accreting protoplanets inside the inner cavities of transitional disks. The purpose of this campaign will be to (a) complete the Magellan Giant Accreting Protoplanet Survey (GAPlanetS), which will identify accreting protoplanet and inner disk candidates through differential imaging at H-alpha, and (b) characterize these objects in the near-infrared with the Gemini Planet Imager (GPI). Multiwavelength followup of GAPlanetS candidates with GPI is critical in determining the nature of candidate protoplanets identified at H-alpha, as GPI is the only currently-available US instrument with the polarimetric capability, inner working angle and resolution to image them in the NIR. I have already demonstrated the power of the GAPlanetS imaging technique to identify accreting objects, both low mass stars (HD142527B) and forming protoplanets (LkCa15b), as described in detail in the body of this proposal. Planets identified through GAPplanetS will be among the tightest separation directly imaged giant planets to date, and the survey will be the first direct imaging survey capable of identifying giant planets still in the process of formation.
+'''
+url = "TODO good version"

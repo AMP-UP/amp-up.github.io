@@ -1,0 +1,12 @@
+# applicant
+name = "David Jones"
+year = "2020"
+flavor = "Einstein"
+institution_phd = "TODO look up"
+institution_host = "TODO look up"
+
+# application
+title = "Supernova Cosmology in the Era of Cosmological Tensions"
+science_category = "Physics and Cosmology"
+abstract = nan
+url = "TODO new upload"

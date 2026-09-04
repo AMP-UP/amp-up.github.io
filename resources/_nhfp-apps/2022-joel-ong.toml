@@ -1,0 +1,12 @@
+# applicant
+name = "Joel Ong"
+year = "2022"
+flavor = "Hubble"
+institution_phd = "Yale University"
+institution_host = "University of Hawaii"
+
+# application
+title = "Constraining Post-main-sequence Angular Momentum Evolution with Mixed-mode Asteroseismology"
+science_category = "Stellar Physics"
+abstract = nan
+url = "TODO good version"

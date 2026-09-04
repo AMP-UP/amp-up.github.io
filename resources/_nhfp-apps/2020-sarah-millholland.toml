@@ -1,0 +1,12 @@
+# applicant
+name = "Sarah Millholland"
+year = "2020"
+flavor = "Sagan"
+institution_phd = "TODO look up"
+institution_host = "TODO look up"
+
+# application
+title = "Formation and Dynamics of Short-Period Exoplanetary Systems"
+science_category = "Exoplanet Formation and Protoplanetary Disks"
+abstract = nan
+url = "TODO new upload"

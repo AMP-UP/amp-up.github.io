@@ -1,0 +1,12 @@
+# applicant
+name = "John Tobin"
+year = "2011"
+flavor = "Hubble"
+institution_phd = "University of Michigan"
+institution_host = "National Radio Astronomy Observatory"
+
+# application
+title = "The Formation and Structure of Proto-Planetary Disks Around the Youngest Protostars"
+science_category = "Exoplanet Formation and Protoplanetary Disks"
+abstract = nan
+url = "TBD good version"

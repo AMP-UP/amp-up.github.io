@@ -1,0 +1,12 @@
+# applicant
+name = "Andrew Hopkins"
+year = "2001"
+flavor = "Hubble"
+institution_phd = "University of Sydney"
+institution_host = "University of Pittsburgh"
+
+# application
+title = "Evolution of star-forming galaxies spanning $0<z\\lesssim2$"
+science_category = "Galaxies and the Intergalactic Medium"
+abstract = nan
+url = "TBD new upload"

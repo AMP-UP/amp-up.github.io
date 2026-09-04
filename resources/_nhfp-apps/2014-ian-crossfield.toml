@@ -1,0 +1,14 @@
+# applicant
+name = "Ian Crossfield"
+year = "2014"
+flavor = "Sagan"
+institution_phd = "University of California, Los Angeles"
+institution_host = "TBD look up"
+
+# application
+title = "Spectroscopy and Cartography of Cool Extrasolar Atmospheres"
+science_category = "Exoplanets and Habitability"
+abstract = '''
+Clouds and hazes dramatically alter the observed properties of exoplanet atmospheres seen in transmission and emission, just as they sculpt the thermal emission spectra of more massive brown dwarfs. I will conduct an intensive observational study of clouds and hazes in nearby exoplanets and brown dwarfs. The main components will be: (1) a Large HST/STIS survey for Rayleigh Scattering hazes in known super-Earths; (2) followup transit observations of newly-discovered planets; (3) eclipse mapping with Spitzer and HST/WFC3 to chart the day sides of hot Jupiters; and (4) Doppler Imaging of cloudy brown dwarfs to produce global 2D maps of multiple chemical species.
+'''
+url = "TBD good version"

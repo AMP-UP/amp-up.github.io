@@ -1,0 +1,12 @@
+# applicant
+name = "Georgia Panopoulou"
+year = "2019"
+flavor = "Hubble"
+institution_phd = "TODO look up"
+institution_host = "TODO look up"
+
+# application
+title = "A unique approach to the determination of the Galactic magnetic field using starlight and synchrotron polarization observations"
+science_category = "The Milky Way and Resolved Stellar Populations"
+abstract = nan
+url = "TODO good version"

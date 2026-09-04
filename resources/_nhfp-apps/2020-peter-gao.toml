@@ -1,0 +1,12 @@
+# applicant
+name = "Peter Gao"
+year = "2020"
+flavor = "Sagan"
+institution_phd = "TODO look up"
+institution_host = "TODO look up"
+
+# application
+title = "The Role of Aerosols in the Formation and Early Evolution of Giant Planets"
+science_category = "Exoplanets and Habitability"
+abstract = nan
+url = "TODO good version"

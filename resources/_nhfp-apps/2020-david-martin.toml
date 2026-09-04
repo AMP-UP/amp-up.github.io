@@ -1,0 +1,14 @@
+# applicant
+name = "David Martin"
+year = "2020"
+flavor = "Sagan"
+institution_phd = "University of Geneva"
+institution_host = "TODO look up"
+
+# application
+title = "Two Projects with Circumbinary Planets—Using the Planets to Solve Super-Earth Formation, and the Binaries to Empirically Constrain M-dwarfs"
+science_category = "Exoplanets and Habitability"
+abstract = '''
+The Kepler mission has yielded two particularly revolutionary results. First, there is a plentiful abundance of Earth and super-Earth sized exoplanets. Second, we have uncovered planets orbiting two stars - circumbinary planets - which possess advantageous observational properties and provide a unique probe of planet formation. However, these two results remain mutually exclusive; no circumbinary planet has been discovered smaller than 3 Earth radii, owing to the insensitivity of searches. As a Hubble fellow I conduct a two-part project. First, I will create and implement sophisticated automated techniques to discover roughly 50 circumbinary Earths and super-Earths transiting Kepler binaries, and potentially more in TESS. Many will have habitable orbits comparable to the inner Solar System. Enhanced circumbinary transit probabilities mean that the stars will be amongst the brightest known to host transiting planets, making these pristine candidates for atmospheric characterisation. I will tap this previously hidden gold mine in the Kepler data, and provide a necessary development for TESS. The second part of my fellowship will be to interpret this plethora of new results to develop revolutionary comparative planetary formation models, and leave a legacy of both targets and techniques for future instruments such as JWST and PLATO.
+'''
+url = "TODO good version"

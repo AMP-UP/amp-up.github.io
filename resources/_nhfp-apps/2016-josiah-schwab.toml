@@ -1,0 +1,12 @@
+# applicant
+name = "Josiah Schwab"
+year = "2016"
+flavor = "Hubble"
+institution_phd = "University of California, Berkeley"
+institution_host = "University of California, Santa Cruz"
+
+# application
+title = "The Stellar Remnants of Double White Dwarf Mergers"
+science_category = "Stellar Physics"
+abstract = nan
+url = "TBD new upload"

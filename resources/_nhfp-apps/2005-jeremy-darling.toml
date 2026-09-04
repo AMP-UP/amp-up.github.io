@@ -1,0 +1,14 @@
+# applicant
+name = "Jeremy Darling"
+year = "2005"
+flavor = "Hubble"
+institution_phd = "Cornell University"
+institution_host = "University of Chicago"
+
+# application
+title = "The Evolution of Neutral Gas from the Epoch of Reionization to the Present"
+science_category = "Galaxies and the Intergalactic Medium"
+abstract = '''
+The gas phase of the universe, dominated by hydrogen, has undergone dramatic changes since radiation decoupled from matter. The first stars and quasars blew ionized bubbles in the neutral gas, and these Str ̈omgren spheres eventually overlapped to create a mostly ionized universe, leaving the surviving neutral hydrogen in overdense filaments tracing the early large scale structure. As density constrasts grew via gravitational instabilities, the neutral hydrogen played a key role in the evolution of galaxies. We propose to study the phase transition of the intergalactic medium during the epoch or reionization and the subsequent evolution of the remaining neutral hydrogen gas, including the connection to galaxy evolution, in a two-pronged effort. First, we will identify probes of the epoch or reionization for eventual absorption line studies, and second we will identify all damped Lyα absorption systems along many lines of sight from the present to the EOR — irrespective of dust content or redshift — and study the hosts of these systems across the epoch of galaxy evolution.
+'''
+url = "TBD good version"

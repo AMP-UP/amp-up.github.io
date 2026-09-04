@@ -1,0 +1,12 @@
+# applicant
+name = "Jonathan Trump"
+year = "2013"
+flavor = "Hubble"
+institution_phd = "University of Arizona"
+institution_host = "Pennsylvania State University"
+
+# application
+title = "The Physics Behind Galaxy / Black Hole Coevolution"
+science_category = "Galaxies and the Intergalactic Medium"
+abstract = nan
+url = "TBD new upload"

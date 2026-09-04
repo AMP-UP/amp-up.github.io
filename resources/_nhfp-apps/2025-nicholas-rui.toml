@@ -1,0 +1,14 @@
+# applicant
+name = "Nicholas Rui"
+year = "1987"
+flavor = "Hubble"
+institution_phd = ""
+institution_host = ""
+
+# application
+title = "A seismic atlas of the stellar merger sky"
+science_category = "Stellar Physics"
+abstract = '''
+TODO find this
+'''
+url = "TODO new upload"

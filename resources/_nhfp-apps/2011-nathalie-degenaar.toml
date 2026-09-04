@@ -1,0 +1,14 @@
+# applicant
+name = "Nathalie Degenaar"
+year = "2011"
+flavor = "Hubble"
+institution_phd = "TBD look up"
+institution_host = "University of Michigan"
+
+# application
+title = "Probing extremes of binary evolution using subluminous X-ray binaries"
+science_category = "Compact Objects and Accretion"
+abstract = '''
+Although X-ray binaries constitute to the brightest X-ray point sources in our Galaxy, a peculiar subgroup is orders of magnitude fainter in the X-rays than the general population. These subluminous X-ray binaries may harbor unusual donors, tracing rare binary evolution paths, and represent a relatively poor explored regime of accretion. This proposal aims at elucidating the nature of this tantalizing population of X-ray binaries to advance our understanding of binary evolution and accretion flows occurring at low rates.
+'''
+url = "TBD good version"

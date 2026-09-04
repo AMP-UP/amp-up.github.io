@@ -1,0 +1,18 @@
+# applicant
+name = "Megan Mansfield"
+year = "2021"
+flavor = "Sagan"
+institution_phd = "University of Chicago"
+institution_host = "TODO look up"
+
+# application
+title = "Atmospheres as Windows to the Diversity of Extrasolar Planets"
+science_category = "Exoplanets and Habitability"
+abstract = '''
+The main goals of exoplanet atmosphere spectroscopy are to determine their compositions and thermal structures in order to further our understanding of planetary formation, physics, and chemistry. Over the past decade exoplanet observations have greatly advanced our understanding of planetary atmospheres, but we have yet to understand these objects as full, three-dimensional worlds.
+
+I propose to research planetary formation, evolution, and habitability through observations of transiting exoplanet atmospheres. My research will focus on three ways to achieve unprecedented precision in exoplanet observations. First, I will use the newly available James Webb Space Telescope to investigate the habitability of terrestrial exoplanets. Second, I will use the new technique of spectroscopic eclipse mapping to resolve hot Jupiter daysides in three dimensions. Finally, I will use newly developed techniques to precisely measure exoplanet compositions with high-resolution observations. My interdisciplinary background and my work in exoplanet observations and theoretical models mean that as a Hubble Fellow I would be uniquely poised to integrate these observational studies into a broader understanding of the atmospheric chemistry and dynamics of exoplanets.
+
+My proposed research is directly relevant to the NASA Astrophysics Exoplanet Exploration Program’s goals to characterize exoplanetary systems and understand the habitability of Earth-like planets.
+'''
+url = "TODO good version"

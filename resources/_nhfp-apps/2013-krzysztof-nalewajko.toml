@@ -1,0 +1,12 @@
+# applicant
+name = "Krzysztof Nalewajko"
+year = "2013"
+flavor = "Einstein"
+institution_phd = "TBD look up"
+institution_host = "TBD look up"
+
+# application
+title = "Understanding Gamma-Ray Flares of Blazars"
+science_category = "Compact Objects and Accretion"
+abstract = nan
+url = "TBD good version"
