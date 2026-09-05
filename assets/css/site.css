@@ -80,10 +80,13 @@
 }
 
 .nhfp-app-item {
+  --nhfp-item-bg: rgba(255, 255, 255, 0.25);
   position: relative;
   margin-bottom: 1em;
-  padding-left: 1em;
+  padding: 0.75em 0.9em 0.75em 1em;
   border-left: 2px solid rgba(0, 0, 0, 0.18);
+  background: var(--nhfp-item-bg);
+  border-radius: 0.25rem;
 }
 
 .nhfp-app-item > div {

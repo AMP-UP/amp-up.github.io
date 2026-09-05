@@ -146,15 +146,15 @@ def build_fragment(apps):
         grouped[app["year"]].append(app)
 
     category_colors = {
-        "All": ("#1b1b1b", "#ffffff"),
-        "Compact Objects and Accretion": ("hsl(220 76% 88%)", "#1b1b1b"),
-        "Exoplanet Formation and Protoplanetary Disks": ("hsl(132 60% 88%)", "#1b1b1b"),
-        "Exoplanets and Habitability": ("hsl(260 80% 89%)", "#1b1b1b"),
-        "Galaxies and the Intergalactic Medium": ("hsl(28 84% 88%)", "#1b1b1b"),
-        "Gravitational Wave Astrophysics": ("hsl(198 74% 88%)", "#1b1b1b"),
-        "Physics and Cosmology": ("hsl(48 82% 87%)", "#1b1b1b"),
-        "Stellar Physics": ("hsl(155 61% 88%)", "#1b1b1b"),
-        "The Milky Way and Resolved Stellar Populations": ("hsl(344 76% 89%)", "#1b1b1b"),
+        "All": ("#1b1b1b", "#ffffff", "#f3f3f3"),
+        "Compact Objects and Accretion": ("hsl(220 76% 88%)", "#1b1b1b", "hsl(220 76% 96%)"),
+        "Exoplanet Formation and Protoplanetary Disks": ("hsl(132 60% 88%)", "#1b1b1b", "hsl(132 60% 96%)"),
+        "Exoplanets and Habitability": ("hsl(260 80% 89%)", "#1b1b1b", "hsl(260 80% 96%)"),
+        "Galaxies and the Intergalactic Medium": ("hsl(28 84% 88%)", "#1b1b1b", "hsl(28 84% 96%)"),
+        "Gravitational Wave Astrophysics": ("hsl(198 74% 88%)", "#1b1b1b", "hsl(198 74% 96%)"),
+        "Physics and Cosmology": ("hsl(48 82% 87%)", "#1b1b1b", "hsl(48 82% 96%)"),
+        "Stellar Physics": ("hsl(155 61% 88%)", "#1b1b1b", "hsl(155 61% 96%)"),
+        "The Milky Way and Resolved Stellar Populations": ("hsl(344 76% 89%)", "#1b1b1b", "hsl(344 76% 96%)"),
     }
 
     html_lines = [
@@ -170,7 +170,7 @@ def build_fragment(apps):
 
     for category in SCIENCE_CATEGORIES:
         label = html.escape(category)
-        color, text_color = category_colors.get(category, ("hsl(0 0% 92%)", "#1b1b1b"))
+        color, text_color, _ = category_colors.get(category, ("hsl(0 0% 92%)", "#1b1b1b", "#f3f3f3"))
         html_lines.append(f'        <button class="nhfp-category-button" data-nhfp-category="{html.escape(category, quote=True)}" type="button" style="--nhfp-button-bg:{color}; --nhfp-button-fg:{text_color};">{label}</button>')
 
     html_lines.append('      </div>')
@@ -198,8 +198,9 @@ def build_fragment(apps):
             if abstract.lower() in {"nan", "n/a", "na", "none"}:
                 abstract = ""
             category = category_label(app.get("science_category"))
+            item_bg = category_colors.get(category, ("hsl(0 0% 96%)", "#1b1b1b", "hsl(0 0% 97%)"))[2]
 
-            html_lines.append('        <li class="nhfp-app-item" data-category="' + html.escape(category, quote=True) + '">')
+            html_lines.append('        <li class="nhfp-app-item" data-category="' + html.escape(category, quote=True) + '" style="--nhfp-item-bg:' + item_bg + ';">')
             html_lines.append(f'          <div class="nhfp-app-title">{title_html}</div>')
             html_lines.append(f'          <div class="nhfp-app-fellow">{name} (<span style="{flavor_style}">{flavor}</span> @ {host})</div>')
             if abstract:
