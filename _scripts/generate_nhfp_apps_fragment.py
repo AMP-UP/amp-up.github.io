@@ -14,7 +14,7 @@ except ModuleNotFoundError:  # pragma: no cover
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "resources" / "_nhfp-apps"
-OUTPUT_PATH = DATA_DIR / "nhfp-apps-fragment.html"
+OUTPUT_PATH = ROOT / "nhfp-apps-fragment.html"
 
 INSTITUTION_ABBREVIATIONS = {
     "California Institute of Technology": "Caltech",
