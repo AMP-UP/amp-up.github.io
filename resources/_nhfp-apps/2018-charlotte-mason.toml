@@ -3,7 +3,7 @@ name = "Charlotte Mason"
 year = "2018"
 flavor = "Hubble"
 institution_phd = "University of California, Los Angeles"
-institution_host = "Smithsonian Astrophysical Observatory"
+institution_host = "Smithsonian Astronomical Observatory"
 
 # application
 title = "Revolutionizing Reionization with JWST"

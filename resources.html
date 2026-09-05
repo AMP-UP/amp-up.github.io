@@ -30,33 +30,61 @@
         </section>
 
         <div id="resources">
-          <section class="wrapper style4 container">
+          <!-- <section class="wrapper style4 container"> -->
             <div class="content">
               <section>
-                <header>
+                <!-- <header>
                   <h3>Additional Resources</h3>
-                </header>
+                </header> -->
+
+                <div id="nhfp-apps-fragment"></div>
+                <script>
+                  window.MathJax = {
+                    tex: {
+                      inlineMath: [['$', '$'], ['\\(', '\\)']],
+                      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+                    },
+                    svg: {
+                      fontCache: 'global'
+                    }
+                  };
+
+                  function loadNhfpApps() {
+                    fetch("resources/_nhfp-apps/nhfp-apps-fragment.html")
+                      .then(function(response) {
+                        if (!response.ok) {
+                          throw new Error("Unable to load the NHFP apps fragment.");
+                        }
+                        return response.text();
+                      })
+                      .then(function(html) {
+                        var container = document.getElementById("nhfp-apps-fragment");
+                        container.innerHTML = html;
+                        if (window.MathJax && typeof MathJax.typesetPromise === "function") {
+                          return MathJax.typesetPromise([container]);
+                        }
+                      })
+                      .catch(function(error) {
+                        document.getElementById("nhfp-apps-fragment").innerHTML =
+                          '<p>Unable to load the NHFP application list right now.</p>';
+                        console.error(error);
+                      });
+                  }
+
+                  var mathjaxScript = document.createElement("script");
+                  mathjaxScript.src = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js";
+                  mathjaxScript.async = true;
+                  mathjaxScript.onload = loadNhfpApps;
+                  mathjaxScript.onerror = function() {
+                    console.warn("MathJax failed to load; math mode will appear as raw TeX text.");
+                    loadNhfpApps();
+                  };
+                  document.head.appendChild(mathjaxScript);
+                </script>
+
                 <p>
                   <a href="https://docs.google.com/spreadsheets/d/1diDNrhjxLRvYI5ieS2zGM1aNWdO8hev_/edit?gid=1784892472#gid=1784892472">Examples of Successful NHFP applications</a>
                 </p>
-                <div id="nhfp-apps-fragment"></div>
-                <script>
-                  fetch("resources/_nhfp-apps/nhfp-apps-fragment.html")
-                    .then(function(response) {
-                      if (!response.ok) {
-                        throw new Error("Unable to load the NHFP apps fragment.");
-                      }
-                      return response.text();
-                    })
-                    .then(function(html) {
-                      document.getElementById("nhfp-apps-fragment").innerHTML = html;
-                    })
-                    .catch(function(error) {
-                      document.getElementById("nhfp-apps-fragment").innerHTML =
-                        '<p>Unable to load the NHFP application list right now.</p>';
-                      console.error(error);
-                    });
-                </script>
                 <iframe
                   src="https://docs.google.com/spreadsheets/d/1diDNrhjxLRvYI5ieS2zGM1aNWdO8hev_/edit?usp=sharing&ouid=115060554335855526505&rtpof=true&sd=true"
                   width="100%"
@@ -71,7 +99,7 @@
                 </p>
               </section>
             </div>
-          </section>
+          <!-- </section> -->
         </div>
       </article>
 

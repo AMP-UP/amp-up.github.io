@@ -18,34 +18,52 @@ OUTPUT_PATH = DATA_DIR / "nhfp-apps-fragment.html"
 
 INSTITUTION_ABBREVIATIONS = {
     "California Institute of Technology": "Caltech",
-    "Princeton University": "Princeton",
-    "Northwestern University": "Northwestern",
-    "Space Telescope Science Institute": "STScI",
-    "University of Hawaii": "UH",
-    "New York University": "NYU",
-    "Harvard University": "Harvard",
-    "University of Oxford": "Oxford",
-    "Yale University": "Yale",
-    "Massachusetts Institute of Technology": "MIT",
-    "University of California, Berkeley": "UC Berkeley",
-    "University of California, Santa Cruz": "UC Santa Cruz",
-    "University of Michigan": "Michigan",
     "Columbia University": "Columbia",
-    "University of Chicago": "UChicago",
-    "University of Arizona": "Arizona",
-    "Johns Hopkins University": "JHU",
-    "University of Washington": "UW",
+    "Georgia State University": "Georgia State",
+    "Harvard University": "Harvard CfA",
+    "Institute for Advanced Study": "IAS",
+    "Jet Propulsion Laboratory": "JPL",
+    "Lawrence Berkeley National Laboratory": "LBNL",
+    "Massachusetts Institute of Technology": "MIT",
+    "National Radio Astronomy Observatory": "NRAO",
+    "New York University": "NYU",
+    "Northwestern University": "Northwestern",
+    "Pennsylvania State University": "Penn State",
+    "Princeton University": "Princeton",
+    "Rutgers University": "Rutgers",
+    "Smithsonian Astronomical Observatory": "Harvard CfA",
+    "Space Telescope Science Institute": "STScI",
     "Stanford University": "Stanford",
-    "University of Cambridge": "Cambridge",
+    "The Ohio State University": "Ohio State",
+    "University of California, Berkeley": "UC Berkeley",
+    "University of California, San Diego": "UCSD",
+    "University of California, Santa Barbara": "UCSB",
+    "University of California, Santa Cruz": "UC Santa Cruz",
+    "University of Chicago": "UChicago",
+    "University of Colorado Boulder": "CU Boulder",
     "University of Texas at Austin": "UT Austin",
-    "University of Illinois Urbana-Champaign": "UIUC",
-    "University of Minnesota": "UMN",
+    "University of Wisconsin–Madison": "University of Wisconsin",
+    "Yale University": "Yale",
 }
 
+FLAVOR_COLORS = {
+    "Hubble": "#8f1402",
+    "Einstein": "#be006c",
+    "Sagan": "#cf9306",
+    "Chandra": "#5f1b6b",
+    "Spitzer": "#fa4224",
+    "Michelson": "#b30219",
+    "default": "#111111",
+}
 
 def abbreviate_institution(value):
     text = normalize_whitespace(value or "")
     return INSTITUTION_ABBREVIATIONS.get(text, text)
+
+
+def flavor_color(flavor):
+    key = normalize_whitespace(flavor or "")
+    return FLAVOR_COLORS.get(key, FLAVOR_COLORS["default"])
 
 
 def load_apps():
@@ -82,6 +100,8 @@ def normalize_whitespace(value):
 
 def title_or_placeholder(app):
     title = normalize_whitespace(app.get("title") or "")
+    if title.lower() in {"nan", "n/a", "na", "none"}:
+        return "(unspecified title)"
     return title if title else "(unspecified title)"
 
 
@@ -106,12 +126,17 @@ def build_fragment(apps):
         for app in grouped[year]:
             title = title_or_placeholder(app)
             app_link = app.get("url")
-            title_html = html.escape(title)
+            if title.lower() == "(unspecified title)":
+                title_html = '<em>(unspecified title)</em>'
+            else:
+                title_html = html.escape(title)
             if app_link:
                 title_html = f'<a href="{html.escape(app_link, quote=True)}" target="_blank" rel="noopener noreferrer">{title_html}</a>'
 
             name = html.escape(normalize_whitespace(app.get("name") or "(unnamed fellow)"))
-            flavor = html.escape(normalize_whitespace(app.get("flavor") or "unknown"))
+            flavor_raw = normalize_whitespace(app.get("flavor") or "unknown")
+            flavor = html.escape(flavor_raw)
+            flavor_style = f'color: {flavor_color(flavor_raw)};'
             host = html.escape(abbreviate_institution(app.get("institution_host") or "(unspecified host)"))
             abstract = normalize_whitespace(app.get("abstract") or "")
             if abstract.lower() in {"nan", "n/a", "na", "none"}:
@@ -119,7 +144,7 @@ def build_fragment(apps):
 
             html_lines.append('        <li class="nhfp-app-item">')
             html_lines.append(f'          <div class="nhfp-app-title">{title_html}</div>')
-            html_lines.append(f'          <div class="nhfp-app-fellow">{name} ({flavor} @ {host})</div>')
+            html_lines.append(f'          <div class="nhfp-app-fellow">{name} (<span style="{flavor_style}">{flavor}</span> @ {host})</div>')
             if abstract:
                 html_lines.append('          <details class="nhfp-app-details">')
                 html_lines.append('            <summary>Abstract</summary>')
