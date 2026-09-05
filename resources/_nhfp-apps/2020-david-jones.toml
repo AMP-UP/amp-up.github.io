@@ -2,11 +2,11 @@
 name = "David Jones"
 year = "2020"
 flavor = "Einstein"
-institution_phd = "TODO look up"
-institution_host = "TODO look up"
+institution_phd = "Johns Hopkins University"
+institution_host = "University of California, Santa Cruz"
 
 # application
 title = "Supernova Cosmology in the Era of Cosmological Tensions"
 science_category = "Physics and Cosmology"
 abstract = nan
-url = "TODO new upload"
+url = "https://drive.google.com/file/d/1QqRXXcp31_3UtIAbWeLgSSQMumF2pXaB"

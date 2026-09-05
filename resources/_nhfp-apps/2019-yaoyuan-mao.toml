@@ -2,8 +2,8 @@
 name = "Yao-Yuan Mao"
 year = "2019"
 flavor = "Einstein"
-institution_phd = "TODO look up"
-institution_host = "TODO look up"
+institution_phd = "Stanford University"
+institution_host = "Rutgers University"
 
 # application
 title = "The Galaxy–Halo Connection: Probing the Dark Universe with Galaxies"
@@ -11,4 +11,4 @@ science_category = "Physics and Cosmology"
 abstract = '''
 Our limited understanding of the relationship between visible galaxies and their host dark matter halos has become the most significant systematic uncertainty that hinder our exploration of the nature of dark matter and dark energy. I am in a unique position to employ the galaxy-halo connection to tackle this challenge and to support a diverse set of surveys and experiments. I propose to advance the galaxy-halo connection models so that we can confidently interpret the upcoming results of cosmological surveys, galaxy studies, and dark matter searches. My research program involves theoretical, observational, and infrastructural work, and provides vital components for ongoing and upcoming surveys and experiments.
 '''
-url = "TODO new upload"
+url = "https://drive.google.com/file/d/1DuyrI9rqgGF3xKn6rFFcmPm_-dlGKhrt"

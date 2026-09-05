@@ -3,7 +3,7 @@ name = "Raphaelle Haywood"
 year = "2017"
 flavor = "Sagan"
 institution_phd = "University of St Andrews"
-institution_host = "TODO look up"
+institution_host = "Harvard University"
 
 # application
 title = "Breaking the Ultimate Barrier to Characterizing Other Earths"
@@ -15,4 +15,4 @@ determine their most fundamental parameter: mass. This is precluded by the magne
 processes at play using exquisite HARPS-N observations of the Sun, and examine the magnetic behaviour of other stars. Leveraging on
 these lessons, I will develop recipes for precise mass determinations, to enable the full characterization of small planets.
 '''
-url = "TODO good version"
+url = "https://drive.google.com/file/d/1HuZ9owZD_sX2wMFalgeDGYZ43ZcsAMBO"

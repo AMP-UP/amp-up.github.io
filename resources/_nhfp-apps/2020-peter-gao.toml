@@ -2,11 +2,11 @@
 name = "Peter Gao"
 year = "2020"
 flavor = "Sagan"
-institution_phd = "TODO look up"
-institution_host = "TODO look up"
+institution_phd = "California Institute of Technology"
+institution_host = "University of California, Santa Cruz"
 
 # application
 title = "The Role of Aerosols in the Formation and Early Evolution of Giant Planets"
 science_category = "Exoplanets and Habitability"
 abstract = nan
-url = "TODO good version"
+url = "https://drive.google.com/file/d/1nHikyqzaaEsQLfrHJBKEkErLy6mT40lp"

@@ -3,7 +3,7 @@ name = "Arpita Roy"
 year = "2020"
 flavor = "Hubble"
 institution_phd = "Pennsylvania State University"
-institution_host = "TODO look up"
+institution_host = "California Institute of Technology"
 
 # application
 title = "Of Worlds to Come: Delivering On the Promise of Extreme Precision Spectroscopy for Exoplanets"
@@ -11,4 +11,4 @@ science_category = "Exoplanets and Habitability"
 abstract = '''
 In the overarching quest for habitable worlds, we stand now at a highly potent juncture in the field of ground-based radial velocity as the new generation of "extreme precision" planet hunting spectrographs comes online. This proposal leverages my experience with six of these upcoming next-generation instruments to deliver the much-anticipated Keck Planet Finder spectrograph (in the culmination of my role as Project Scientist), and exploit early science on both KPF and NEID, including studies of stellar activity mitigation, and a pioneering reflected light campaign that becomes possible with the advent of these instruments. Bringing these instruments to final precision requires an extensive commissioning and early science effort, but with the reward of exquisitely stable spectra that allow unprecedented scrutiny into the temporal behavior of stars and planets, revolutionizing our understanding of their variability on different timescales. If a robust detection technique for reflected light can be established as part of this proposal, it will open up a new field of exoplanet characterization, based on the study of atmospheric albedos, and lay the foundation for ground-based (instruments on 30m-class telescopes) and future space-based (JWST, HabEx/LUVOIR) imaging and habitability studies.
 '''
-url = "TODO good version"
+url = "https://drive.google.com/file/d/1wvxDh-bJPTeYjq8-T2gg-HYmrz29kJYq"

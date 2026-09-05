@@ -3,7 +3,7 @@ name = "Justin Pierel"
 year = "2023"
 flavor = "Einstein"
 institution_phd = "University of Southern Carolina"
-institution_host = "TODO look up"
+institution_host = "Space Telescope Science Institute"
 
 # application
 title = "Leveraging HST for a New Era of Precision NIR SN Ia Cosmology"
@@ -11,4 +11,4 @@ science_category = "Physics and Cosmology"
 abstract = '''
 Near-infrared (NIR) observations from the Nancy Grace Roman Space Telescope will help to unravel the mysteries of dark energy. Type Ia supernovae (SN Ia) will be one of the principal anchors of the Roman cosmology program, requiring a model of SN Ia light curve evolution used to make corrections to the observed SN brightness and thereby infer a luminosity distance. Such corrections take into account, among other variables, that less luminous SN Ia are cooler and therefore appear redder. Unfortunately, this relationship is confounded by dust, which also produces fainter and redder objects, making it extremely difficult to correctly infer intrinsic SN Ia color, and thus luminosity. The consequence is one of the largest systematic uncertainties for SN Ia dark energy measurements today. Fortunately, Roman will be observing at rest-frame NIR wavelengths, where SN Ia are better standard candles and the impact of dust is extremely small. However, my work only recently trained the industry-standard model for SN Ia standardization (SALT3) at NIR wavelengths, so our understanding of NIR SN Ia cosmology is severely limited. As a Hubble Fellow, I will use my new model (SALT3-NIR) to make the first HST WFC3/IR-only measurement of the dark energy equation of state parameter, w. This work will significantly improve calibration and dust-related uncertainties compared to the optical and provide the first analysis of systematics/best practices for NIR SN Ia cosmology, which I will use to re-optimize the Roman survey for rest-frame optical+NIR.
 '''
-url = "TODO good version"
+url = "https://drive.google.com/file/d/1J2EPCPlKGDGqQz0Gd4skq48bDjNzp_SQ"

@@ -3,7 +3,7 @@ name = "Andrew Vanderburg"
 year = "2017"
 flavor = "Sagan"
 institution_phd = "Harvard University"
-institution_host = "TODO look up"
+institution_host = "University of Texas at Austin"
 
 # application
 title = "The Galactic Distribution of Exoplanets"
@@ -11,4 +11,4 @@ science_category = "Exoplanets and Habitability"
 abstract = '''
 The Kepler mission revolutionized our understanding of small exoplanets orbiting near their host stars, but Kepler only surveyed one small part of the sky. The populations of planets in other parts of the sky, which formed and evolved in different environments, could be somewhat different from the planet population Kepler observed. I propose to use Kepler in its K2 mission, which now observes target fields across the sky, to probe the population of exoplanets in different galactic environments. I will search K2 data for planets and characterize the efficiency with which I can find small planets, and I will conduct a large spectroscopic survey of the detected planet candidates and characterize the target fields. Any differences in the population of planets in different galactic environments will betray the formation and evolution history of small planets.
 '''
-url = "TODO good version"
+url = "https://drive.google.com/file/d/10GZUQiF-VH2jQNaYrK8njkr81SpmuacF"

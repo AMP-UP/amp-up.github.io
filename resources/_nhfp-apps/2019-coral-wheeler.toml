@@ -2,8 +2,8 @@
 name = "Coral Wheeler"
 year = "2019"
 flavor = "Hubble"
-institution_phd = "TODO look up"
-institution_host = "TODO look up"
+institution_phd = "University of California, Irvine"
+institution_host = "Carnegie Observatories"
 
 # application
 title = "Ultra-High Resolution Simulations of the Milky Way and its Satellites"
@@ -11,4 +11,4 @@ science_category = "The Milky Way and Resolved Stellar Populations"
 abstract = '''
 The Local Group provides a Rosetta Stone for galaxy formation theory, linking cosmology and Galactic astronomy in a unique way. Many aspects of the spatial structure, star formation history, and satellites of the Milky Way (MW) are known to a precision that is unachievable in extragalactic systems, and we expect to soon have massive new observational datasets with which to test fundamental predictions of cosmological and galaxy formation models. Of course the MW and its satellites are not independent systems — the differences between the independent and interacting dwarf galaxies provide important clues to the relative importance of feedback and interactions with massive neighbors in regulating dwarf galaxy properties. These interactions may also affect the MW. I will extract analogues for a MW-mass galaxy and a pair of dwarfs at different masses from cosmological simulations ~2-4 Gyr before z=0 and re-simulate their interaction using orbital properties taken from current observations, focusing on two projects: 1) The effect of an encounter between dwarf galaxies and the MW on the star formation, kinematics and substructure of the interacting satellites and 2) The effect of the collision on the morphology and star formation history of the MW itself.
 '''
-url = "TODO new upload"
+url = "https://drive.google.com/file/d/1m7f3OGy9Zzfki8ncGTb40NOZpW6E-Ds7"

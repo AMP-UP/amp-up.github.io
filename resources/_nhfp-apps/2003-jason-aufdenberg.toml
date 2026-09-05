@@ -3,7 +3,7 @@ name = "Jason Aufdenberg"
 year = "2003"
 flavor = "Michelson"
 institution_phd = "Arizona State University"
-institution_host = "TBD look this up"
+institution_host = "National Radio Astronomy Observatory"
 
 # application
 title = "21st Century Interferometry of Hot Star Photospheres"
@@ -11,4 +11,4 @@ science_category = "Stellar Physics"
 abstract = '''
 Recently commissioned interferometers on the earth (e.g., CHARA, VLTI, NPOI, Keck) and those planned for space (SIM, TPF) will be key tools for astrophysicists through the next decade and beyond. Recent technological developments make possible now, for the first time in 30 years, the direct measurement of stellar diameters and limb-intensity profiles of stars hotter than the sun. Using the Center for High Resolution Astronomy (CHARA) interferometric array, such measurements will be made and, by combining both experimental and theoretical expertise, the uncertainties in the direct effective temperatures of 33 stars will significantly reduced. These data are crucial for testing state-of-the-art models of both stellar atmospheres and stellar interiors, and thereby our understanding of stellar and galactic evolution. The first limb-intensity profile measurements of 8 early-type giants and supergiants will double the number of stars for which limb-darkening has been directly measured and provide rare direct tests of model stellar atmosphere intensity predictions. Furthermore, independent mass-loss rates for B- and A-type supergiants, critical for the calibration of these stars as independent distance indicators, will be determined via interferometry for the first time by comparing measurements with the predictions of expanding model atmospheres.
 '''
-url = "TBD good version"
+url = "https://drive.google.com/file/d/1BSKiB6s5E-cXAwlOfEQTrBPL1Ii1uF-K"

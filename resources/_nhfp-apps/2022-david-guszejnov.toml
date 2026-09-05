@@ -3,7 +3,7 @@ name = "Dávid Guszejnov"
 year = "2022"
 flavor = "Hubble"
 institution_phd = "California Institute of Technology"
-institution_host = "TODO look up"
+institution_host = "Harvard University"
 
 # application
 title = "The Role of Physical Processes and the Environment in Star Formation"
@@ -11,4 +11,4 @@ science_category = "Stellar Physics"
 abstract = '''
 Stars are the fundamental units of astrophysics and their formation is a key process that influences the evolution of galaxies, planets, and the development of life. Understanding how stars form is crucial even for seemingly unconnected fields of astronomy, as the interpretation of observed starlight from galaxies (even as a background) and other unresolved sources relies on our understanding of star formation (e.g., an assumed initial mass function of stars). There is no comprehensive theory of star formation, despite intense effort on both the theoretical and observational sides, due to the complex, non-linear physics involved and the enormous dynamic range of the problem. My goal is to understand the roles turbulence, magnetic fields, feedback and the local environment play in star formation, on scales from individual protostars to giant molecular clouds. I am building both analytical and numerical tools to answer questions like: What regulates star formation? What sets the characteristic mass of the stellar initial mass function (IMF)? Why are stars clustered? What sets the properties of binaries? How is star formation different in other galaxies?
 '''
-url = "TODO good version"
+url = "https://drive.google.com/file/d/1QKKjHriEDINC0_Th8TNDE3w4yqe5MZhc"

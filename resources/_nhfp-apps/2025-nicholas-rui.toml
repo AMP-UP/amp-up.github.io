@@ -1,14 +1,14 @@
 # applicant
 name = "Nicholas Rui"
-year = "1987"
+year = "2025"
 flavor = "Hubble"
-institution_phd = ""
-institution_host = ""
+institution_phd = "California Institute of Technology"
+institution_host = "Princeton University"
 
 # application
 title = "A seismic atlas of the stellar merger sky"
 science_category = "Stellar Physics"
 abstract = '''
-TODO find this
+Stellar mergers are common but poorly understood processes. Owing to its sensitivity to internal stellar properties, asteroseismology is uniquely capable of discovering merger remnant stars that appear superficially normal. Red giants' rich pulsation spectra, strong coupling to core oscillations, and high rates of interaction make them optimal targets for seismic searches of past mergers. The hundreds of thousands of red giants measured by TESS and Roman will revolutionize these searches by building large enough seismic samples of merger remnants to probe the statistics of the mergers themselves. As a Hubble Fellow, I will model the seismic properties of a diverse zoo of red giant merger remnant stars. By comparing TESS and Roman catalogs to synthetic populations from next-generation binary population codes, I will extract the intrinsic rates of various types of stellar mergers.
 '''
-url = "TODO new upload"
+url = "https://drive.google.com/file/d/17VsxMDhpDdEFs1QKKjo-TA5g1VpvLSb2"

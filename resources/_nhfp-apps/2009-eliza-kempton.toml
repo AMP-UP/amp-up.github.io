@@ -2,8 +2,8 @@
 name = "Eliza Kempton"
 year = "2009"
 flavor = "Sagan"
-institution_phd = "TBD look up"
-institution_host = "TBD look up"
+institution_phd = "Harvard University"
+institution_host = "University of California, Santa Cruz"
 
 # application
 title = nan
@@ -11,4 +11,4 @@ science_category = "Exoplanets and Habitability"
 abstract = '''
 Extrasolar planet detection methods have advanced to the point where planets approaching Earth mass are detectable with currently available instruments.  The newly discovered class of planets known as “super-Earths” with masses in the range of 1-10 M$_\oplus$ afford scientists the ability to study planets and planet formation scenarios in a mass regime that does not exist in our solar system. Characterization of super Earth atmospheres will be possible with future instruments such as those aboard the James Webb Space Telescope.  However, the interpretation of any such observations will necessitate direct comparison against theoretical atmosphere models.  As a Ph.D. student I have developed a planetary atmosphere model specifically for super-Earths, and as a Sagan fellow I will continue to develop this model to study the range of possible atmospheres that may take hold on these low-mass planets.  I plan to examine the important effects of non-equilibrium chemistry on super-Earth atmospheres by incorporating a photochemical model into my existing model atmosphere.  I will also study the effects of clouds and surface-atmosphere interactions on the atmospheric structure and composition.  The results from my models will then be applied to determine what types of future observations will be necessary to characterize and classify the atmospheres of low-mass planets.
 '''
-url = "TBD new upload"
+url = "https://drive.google.com/file/d/10T1C-bEEEL5ULCYt8F0U8PlZ2B4aY9Ak"

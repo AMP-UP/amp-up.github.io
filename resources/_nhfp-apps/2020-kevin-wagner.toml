@@ -3,7 +3,7 @@ name = "Kevin Wagner"
 year = "2020"
 flavor = "Sagan"
 institution_phd = "University of Arizona"
-institution_host = "TODO look up"
+institution_host = "University of Arizona"
 
 # application
 title = "A New Era of Exoplanet Imaging Mid-Infrared Exploration of the Habitable Zones of Nearby Stars"
@@ -11,4 +11,4 @@ science_category = "Exoplanets and Habitability"
 abstract = '''
 Earth-sized exoplanets have been discovered through indirect observations, while direct imaging has enabled the discoveries of roughly a dozen wide-orbit giant planets. For bright nearby stars, the habitable zones overlap with background-limited sensitivity regions of current large telescopes-enabling an exciting opportunity to bridge the gap and to directly image nearby, potentially habitable planets in long exposures. With the current sensitivity, we can possibly observe habitable-zone super-Earths around the nearest stars, and, with continued progress, my aim is to directly observe the most challenging and exciting targets: exo-Earths. As a NASA Hubble Postdoctoral Fellow, I will first work to more than double the sensitivity of mid-infrared exoplanet imaging by developing new instrumental upgrades. Second, I will utilize this performance gain to conduct a novel direct imaging survey for habitable-zone giant planets around ten nearby stars. Third, I will demonstrate a very deep exposure that will be sensitive to sub-Neptune-sized planets. Finally, I will explore building upon these developments with a conceptual design of a future instrument for the Giant Magellan Telescope (GMT), which will enable imaging many more low-mass planets around more distant stars.
 '''
-url = "TODO good version"
+url = "https://drive.google.com/file/d/1-sTiJaWwR5442nqab2vukt6e7Huw-o0W"

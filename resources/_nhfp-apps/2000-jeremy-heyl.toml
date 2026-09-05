@@ -3,7 +3,7 @@ name = "Jeremy Heyl"
 year = "2000"
 flavor = "Chandra"
 institution_phd = "University of California, Santa Cruz"
-institution_host = "TBD look this up"
+institution_host = "Smithsonian Astronomical Observatory"
 
 # application
 title = "Probing the Physics of Neutron Stars Through Observations of their Atmospheres"
@@ -11,4 +11,4 @@ science_category = "Compact Objects and Accretion"
 abstract = '''
 In my thesis, I examined how intense magnetic fields influence physical processes in the vicinity of and inside neutron stars. To understand the effect of the magnetic field outside the star, I derived a compact analytic form for the effective Lagrangian of quantum electrodynamics (QED) with an external field, the index of refraction, the opacity to form electromagnetic shocks, and corrections to a macroscopic magnetic dipole. I developed both an analytic and a convenient numerical technique to accurately study the properties of simple atoms and molecules in an intense magnetic field, aiding in the interpretion of spectra from neutron star atmospheres. I calculated both analytic and numerical models of the structure of neutron-star envelopes over a wide range of magnetic field geometries. These results were translated into constraints the cooling emission of several neutron star candidates.
 '''
-url = "TBD new upload"
+url = "https://drive.google.com/file/d/1ojUDZIWetWdu0l7CbpNjrAjX4bG9eCjP"

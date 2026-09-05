@@ -3,7 +3,7 @@ name = "Matteo Brogi"
 year = "2014"
 flavor = "Hubble"
 institution_phd = "Leiden University"
-institution_host = "University of Colorado, Boulder"
+institution_host = "University of Colorado Boulder"
 
 # application
 title = "Pushing forward the frontiers of exoplanet characterization"
@@ -11,4 +11,4 @@ science_category = "Exoplanets and Habitability"
 abstract = '''
 The field of exoplanets is one of the most exciting research areas in contemporary astrophysics. It addresses fundamental questions about the origin and uniqueness of the Solar System, and it ultimately aims to study habitable terrestrial planets and the signatures of life. During my PhD, I have developed a new technique for characterizing exoplanets via high-resolution spectroscopy. For the first time, I have detected the atmospheres of non-transiting planets, and measured their masses and orbital inclinations (e.g. Brogi et al., Nature, 2012). As a Hubble Fellow, I will exploit the full capabilities of this method. Furthermore, I will combine the complementary information from observations at low and high spectral resolution. This will significantly reduce degeneracies in the measured atmospheric parameters and initiate a stage of comparative planetology in exoplanet research, which is required to fully understand planet formation and evolution.
 '''
-url = "TBD good version"
+url = "https://drive.google.com/file/d/1RuFsWBhPb0Yn494Njxij70usH-u0E8Kd"

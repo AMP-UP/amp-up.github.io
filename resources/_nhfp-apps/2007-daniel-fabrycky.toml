@@ -2,8 +2,8 @@
 name = "Daniel Fabrycky"
 year = "2007"
 flavor = "Michelson"
-institution_phd = "TBD look up"
-institution_host = "TBD look up"
+institution_phd = "Princeton University"
+institution_host = "Harvard University"
 
 # application
 title = "Dynamical detection and migration of multiple-body planetary systems"
@@ -11,4 +11,4 @@ science_category = "Exoplanets and Habitability"
 abstract = '''
 With the discovery of planets orbiting other stars came numerous examples of multiple-body systems: as of October 2006, 20 stars are known to host multiple planets and 31 planet-hosting stars are known to have at least one stellar companion. In our own planetary system, the planets only slightly perturb each other’s orbits because of their relatively small eccentricities and inclinations and their generous spacing.  The planets of other stars, in contrast, generally have a strong dynamical coupling to one another.  If one of the planets transits the host star, transit-timing measurements will exquisitely constrain the system’s parameters and may even permit the detection of additional planets.  I will develop a theoretical and statistical framework to diagnose the dynamical state of planetary systems by such measurements.  The long-term perturbation of a planet by a companion star can drive its orbit to high eccentricity; with the help of tidal dissipation the planet may migrate to become a hot Jupiter.  I will make theoretical models of such evolution to constrain the histories of planets in binaries on the basis of their orbits observable by Navigator observatories SIM and TPF.
 '''
-url = "TBD good version"
+url = "https://drive.google.com/file/d/1THT-mosRL0dBkh1FaB3VLK80WcbsNyvT"
