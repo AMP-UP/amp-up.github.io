@@ -114,7 +114,7 @@ def category_label(value):
 
 def build_fragment(apps):
     grouped = defaultdict(list)
-    categories = {"Gravitational wave astrophysics"}
+    categories = {"Gravitational Wave Astrophysics"} # TODO: this is kludgy: just pre-code these
     for app in apps:
         grouped[app["year"]].append(app)
         categories.add(category_label(app.get("science_category")))
