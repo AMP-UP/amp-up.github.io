@@ -146,15 +146,25 @@ def build_fragment(apps):
         grouped[app["year"]].append(app)
 
     category_colors = {
-        "All": ("#1b1b1b", "#ffffff", "#f3f3f3"),
+        # key: (button_bg, text_color, item_bg_lighter)
+        # Normalize all buttons to the same bright luminance (88%) and item backgrounds to 96%.
+        "All": ("hsl(0 0% 88%)", "#1b1b1b", "hsl(0 0% 96%)"),
+        # Compact Objects: blue
         "Compact Objects and Accretion": ("hsl(220 76% 88%)", "#1b1b1b", "hsl(220 76% 96%)"),
-        "Exoplanet Formation and Protoplanetary Disks": ("hsl(132 60% 88%)", "#1b1b1b", "hsl(132 60% 96%)"),
-        "Exoplanets and Habitability": ("hsl(260 80% 89%)", "#1b1b1b", "hsl(260 80% 96%)"),
-        "Galaxies and the Intergalactic Medium": ("hsl(28 84% 88%)", "#1b1b1b", "hsl(28 84% 96%)"),
-        "Gravitational Wave Astrophysics": ("hsl(198 74% 88%)", "#1b1b1b", "hsl(198 74% 96%)"),
-        "Physics and Cosmology": ("hsl(48 82% 87%)", "#1b1b1b", "hsl(48 82% 96%)"),
-        "Stellar Physics": ("hsl(155 61% 88%)", "#1b1b1b", "hsl(155 61% 96%)"),
-        "The Milky Way and Resolved Stellar Populations": ("hsl(344 76% 89%)", "#1b1b1b", "hsl(344 76% 96%)"),
+        # Exoplanet Formation: magenta-ish (inoffensive)
+        "Exoplanet Formation and Protoplanetary Disks": ("hsl(320 60% 88%)", "#1b1b1b", "hsl(320 60% 96%)"),
+        # Exoplanets & Habitability: pink
+        "Exoplanets and Habitability": ("hsl(340 80% 88%)", "#1b1b1b", "hsl(340 80% 96%)"),
+        # Galaxies: green
+        "Galaxies and the Intergalactic Medium": ("hsl(120 60% 88%)", "#1b1b1b", "hsl(120 60% 96%)"),
+        # Gravitational Wave Astrophysics: purple
+        "Gravitational Wave Astrophysics": ("hsl(270 60% 88%)", "#1b1b1b", "hsl(270 60% 96%)"),
+        # Physics: brown (pale/tan at same luminance)
+        "Physics and Cosmology": ("hsl(28 45% 88%)", "#1b1b1b", "hsl(28 45% 96%)"),
+        # Stellar Physics: yellow
+        "Stellar Physics": ("hsl(55 90% 88%)", "#1b1b1b", "hsl(55 90% 96%)"),
+        # Milky Way: teal
+        "The Milky Way and Resolved Stellar Populations": ("hsl(190 60% 88%)", "#1b1b1b", "hsl(190 60% 96%)"),
     }
 
     html_lines = [
