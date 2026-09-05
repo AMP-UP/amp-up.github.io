@@ -49,6 +49,55 @@
                     }
                   };
 
+                  function configureNhfpFilters(container) {
+                    var buttons = container.querySelectorAll('.nhfp-category-button');
+                    var items = container.querySelectorAll('.nhfp-app-item');
+                    var headings = container.querySelectorAll('.nhfp-year-heading');
+
+                    function updateFilters(selectedCategory) {
+                      var activeCategory = selectedCategory || 'all';
+
+                      buttons.forEach(function(button) {
+                        var isActive = button.getAttribute('data-nhfp-category') === activeCategory;
+                        button.classList.toggle('active', isActive);
+                      });
+
+                      items.forEach(function(item) {
+                        var category = item.getAttribute('data-category') || 'Unspecified';
+                        var visible = activeCategory === 'all' || category === activeCategory;
+                        item.style.display = visible ? '' : 'none';
+                      });
+
+                      headings.forEach(function(heading) {
+                        var nextList = heading.nextElementSibling;
+                        if (!nextList || !nextList.classList || !nextList.classList.contains('nhfp-apps-list')) {
+                          return;
+                        }
+
+                        var anyVisible = Array.from(nextList.querySelectorAll('.nhfp-app-item')).some(function(item) {
+                          return item.style.display !== 'none';
+                        });
+                        heading.style.display = anyVisible ? '' : 'none';
+                        nextList.style.display = anyVisible ? '' : 'none';
+                      });
+                    }
+
+                    buttons.forEach(function(button) {
+                      button.addEventListener('click', function() {
+                        var category = button.getAttribute('data-nhfp-category');
+                        if (category === 'all') {
+                          updateFilters('all');
+                          return;
+                        }
+
+                        var nextCategory = button.classList.contains('active') ? 'all' : category;
+                        updateFilters(nextCategory);
+                      });
+                    });
+
+                    updateFilters('all');
+                  }
+
                   function loadNhfpApps() {
                     fetch("nhfp-apps-fragment.html")
                       .then(function(response) {
@@ -60,6 +109,7 @@
                       .then(function(html) {
                         var container = document.getElementById("nhfp-apps-fragment");
                         container.innerHTML = html;
+                        configureNhfpFilters(container);
                         if (window.MathJax && typeof MathJax.typesetPromise === "function") {
                           return MathJax.typesetPromise([container]);
                         }

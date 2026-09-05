@@ -105,10 +105,19 @@ def title_or_placeholder(app):
     return title if title else "(unspecified title)"
 
 
+def category_label(value):
+    category = normalize_whitespace(value or "")
+    if category.lower() in {"nan", "n/a", "na", "none"}:
+        return "Unspecified"
+    return category if category else "Unspecified"
+
+
 def build_fragment(apps):
     grouped = defaultdict(list)
+    categories = {"Gravitational wave astrophysics"}
     for app in apps:
         grouped[app["year"]].append(app)
+        categories.add(category_label(app.get("science_category")))
 
     html_lines = [
         '<section class="wrapper style4 container">',
@@ -117,7 +126,15 @@ def build_fragment(apps):
         '      <header>',
         '        <h3>Example NHFP Applications</h3>',
         '      </header>',
+        '      <div class="nhfp-category-filter-bar">',
+        '        <button class="nhfp-category-button active" data-nhfp-category="all" type="button">All</button>',
     ]
+
+    for category in sorted(categories):
+        label = html.escape(category)
+        html_lines.append(f'        <button class="nhfp-category-button" data-nhfp-category="{html.escape(category, quote=True)}" type="button">{label}</button>')
+
+    html_lines.append('      </div>')
 
     for year in sorted(grouped.keys(), key=lambda value: int(value) if value.isdigit() else -1, reverse=True):
         html_lines.append(f'      <h4 class="nhfp-year-heading">{html.escape(year)}</h4>')
@@ -141,8 +158,9 @@ def build_fragment(apps):
             abstract = normalize_whitespace(app.get("abstract") or "")
             if abstract.lower() in {"nan", "n/a", "na", "none"}:
                 abstract = ""
+            category = category_label(app.get("science_category"))
 
-            html_lines.append('        <li class="nhfp-app-item">')
+            html_lines.append('        <li class="nhfp-app-item" data-category="' + html.escape(category, quote=True) + '">')
             html_lines.append(f'          <div class="nhfp-app-title">{title_html}</div>')
             html_lines.append(f'          <div class="nhfp-app-fellow">{name} (<span style="{flavor_style}">{flavor}</span> @ {host})</div>')
             if abstract:
