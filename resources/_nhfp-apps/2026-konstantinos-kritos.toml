@@ -1,0 +1,12 @@
+# applicant
+name = "Konstantinos Kritos"
+year = "2026"
+flavor = "Hubble"
+institution_phd = "Johns Hopkins University"
+institution_host = "Stony Brook University"
+
+# application
+title = "Unveiling the mystery of massive black hole seeds through gravitational and electromagnetic waves"
+science_category = "Compact Objects and Accretion"
+abstract = nan
+url = "https://drive.google.com/file/d/1sEElvNIvgUgDpVb8bMnPImzSaQmKBD8a"

@@ -44,6 +44,8 @@ INSTITUTION_ABBREVIATIONS = {
     "University of Texas at Austin": "UT Austin",
     "University of Wisconsin–Madison": "University of Wisconsin",
     "Yale University": "Yale",
+    "Johns Hopkins University": "Johns Hopkins",
+    "Stony Brook University": "Stony Brook",
 }
 
 FLAVOR_COLORS = {
