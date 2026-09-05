@@ -39,6 +39,24 @@
                 <p>
                   <a href="https://docs.google.com/spreadsheets/d/1diDNrhjxLRvYI5ieS2zGM1aNWdO8hev_/edit?gid=1784892472#gid=1784892472">Examples of Successful NHFP applications</a>
                 </p>
+                <div id="nhfp-apps-fragment"></div>
+                <script>
+                  fetch("resources/_nhfp-apps/nhfp-apps-fragment.html")
+                    .then(function(response) {
+                      if (!response.ok) {
+                        throw new Error("Unable to load the NHFP apps fragment.");
+                      }
+                      return response.text();
+                    })
+                    .then(function(html) {
+                      document.getElementById("nhfp-apps-fragment").innerHTML = html;
+                    })
+                    .catch(function(error) {
+                      document.getElementById("nhfp-apps-fragment").innerHTML =
+                        '<p>Unable to load the NHFP application list right now.</p>';
+                      console.error(error);
+                    });
+                </script>
                 <iframe
                   src="https://docs.google.com/spreadsheets/d/1diDNrhjxLRvYI5ieS2zGM1aNWdO8hev_/edit?usp=sharing&ouid=115060554335855526505&rtpof=true&sd=true"
                   width="100%"
