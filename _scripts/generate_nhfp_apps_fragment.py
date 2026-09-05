@@ -58,6 +58,17 @@ FLAVOR_COLORS = {
     "default": "#111111",
 }
 
+SCIENCE_CATEGORIES = [
+    "Compact Objects and Accretion",
+    "Exoplanet Formation and Protoplanetary Disks",
+    "Exoplanets and Habitability",
+    "Galaxies and the Intergalactic Medium",
+    "Gravitational Wave Astrophysics",
+    "Physics and Cosmology",
+    "Stellar Physics",
+    "The Milky Way and Resolved Stellar Populations",
+]
+
 def abbreviate_institution(value):
     text = normalize_whitespace(value or "")
     return INSTITUTION_ABBREVIATIONS.get(text, text)
@@ -107,19 +118,44 @@ def title_or_placeholder(app):
     return title if title else "(unspecified title)"
 
 
+SCIENCE_CATEGORY_ALIASES = {
+    "compact objects and accretion": "Compact Objects and Accretion",
+    "exoplanet formation and protoplanetary disks": "Exoplanet Formation and Protoplanetary Disks",
+    "exoplanets and habitability": "Exoplanets and Habitability",
+    "galaxies and the intergalactic medium": "Galaxies and the Intergalactic Medium",
+    "gravitational wave astrophysics": "Gravitational Wave Astrophysics",
+    "physics and cosmology": "Physics and Cosmology",
+    "stellar physics": "Stellar Physics",
+    "the milky way and resolved stellar populations": "The Milky Way and Resolved Stellar Populations",
+}
+
+
 def category_label(value):
     category = normalize_whitespace(value or "")
     if category.lower() in {"nan", "n/a", "na", "none"}:
         return "Unspecified"
-    return category if category else "Unspecified"
+    lowered = category.lower()
+    if lowered in SCIENCE_CATEGORY_ALIASES:
+        return SCIENCE_CATEGORY_ALIASES[lowered]
+    return category if category in SCIENCE_CATEGORIES else "Unspecified"
 
 
 def build_fragment(apps):
     grouped = defaultdict(list)
-    categories = {"Gravitational Wave Astrophysics"} # TODO: this is kludgy: just pre-code these
     for app in apps:
         grouped[app["year"]].append(app)
-        categories.add(category_label(app.get("science_category")))
+
+    category_colors = {
+        "All": ("#1b1b1b", "#ffffff"),
+        "Compact Objects and Accretion": ("hsl(220 76% 88%)", "#1b1b1b"),
+        "Exoplanet Formation and Protoplanetary Disks": ("hsl(132 60% 88%)", "#1b1b1b"),
+        "Exoplanets and Habitability": ("hsl(260 80% 89%)", "#1b1b1b"),
+        "Galaxies and the Intergalactic Medium": ("hsl(28 84% 88%)", "#1b1b1b"),
+        "Gravitational Wave Astrophysics": ("hsl(198 74% 88%)", "#1b1b1b"),
+        "Physics and Cosmology": ("hsl(48 82% 87%)", "#1b1b1b"),
+        "Stellar Physics": ("hsl(155 61% 88%)", "#1b1b1b"),
+        "The Milky Way and Resolved Stellar Populations": ("hsl(344 76% 89%)", "#1b1b1b"),
+    }
 
     html_lines = [
         '<section class="wrapper style4 container">',
@@ -129,12 +165,13 @@ def build_fragment(apps):
         '        <h3>Example NHFP Applications</h3>',
         '      </header>',
         '      <div class="nhfp-category-filter-bar">',
-        '        <button class="nhfp-category-button active" data-nhfp-category="all" type="button">All</button>',
+        '        <button class="nhfp-category-button active" data-nhfp-category="all" type="button" style="background-color:#dfe4e7; color:#1b1b1b; --nhfp-button-bg:#dfe4e7; --nhfp-button-fg:#1b1b1b;">All</button>',
     ]
 
-    for category in sorted(categories):
+    for category in SCIENCE_CATEGORIES:
         label = html.escape(category)
-        html_lines.append(f'        <button class="nhfp-category-button" data-nhfp-category="{html.escape(category, quote=True)}" type="button">{label}</button>')
+        color, text_color = category_colors.get(category, ("hsl(0 0% 92%)", "#1b1b1b"))
+        html_lines.append(f'        <button class="nhfp-category-button" data-nhfp-category="{html.escape(category, quote=True)}" type="button" style="--nhfp-button-bg:{color}; --nhfp-button-fg:{text_color};">{label}</button>')
 
     html_lines.append('      </div>')
 

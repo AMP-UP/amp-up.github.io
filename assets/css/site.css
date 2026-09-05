@@ -49,21 +49,28 @@
 }
 
 .nhfp-category-button {
+  --nhfp-button-bg: #f3f3f3;
+  --nhfp-button-fg: #1b1b1b;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 999px;
-  background: #f3f3f3;
-  color: #333;
+  background-color: var(--nhfp-button-bg);
+  color: var(--nhfp-button-fg);
   cursor: pointer;
   font-size: 0.72em;
   line-height: 1.2;
   padding: 0.3em 0.7em;
   letter-spacing: 0.02em;
+  transition: filter 0.15s ease, box-shadow 0.15s ease;
+}
+
+.nhfp-category-button:hover {
+  filter: brightness(0.98);
 }
 
 .nhfp-category-button.active {
-  background: #1b1b1b;
-  border-color: #1b1b1b;
-  color: #fff;
+  border-color: rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.08);
+  filter: saturate(1.05) brightness(0.97);
 }
 
 .nhfp-apps-list {
@@ -73,7 +80,10 @@
 }
 
 .nhfp-app-item {
+  position: relative;
   margin-bottom: 1em;
+  padding-left: 1em;
+  border-left: 2px solid rgba(0, 0, 0, 0.18);
 }
 
 .nhfp-app-item > div {
