@@ -1,0 +1,60 @@
+#logoimg {
+  float: left;
+  margin-top: -10px;
+  margin-left: -10px;
+  margin-bottom: -10px;
+  width: 50px;
+  height: 50px;
+  background-image: url("../../images/Logo2_color_black.png");
+  background-size: 50px 50px;
+}
+
+.alt #logoimg {
+  background-image: url("../../images/Logo2_color_white.png");
+}
+
+.site-brand-image {
+  display: block;
+  width: 450px;
+  max-width: 100%;
+  margin: -80px auto 0;
+}
+
+.site-intro {
+  margin-top: -120px;
+}
+
+.site-lead-panel {
+  margin-top: -2em;
+  margin-bottom: -3em;
+}
+
+.site-brand-mark {
+  display: inline;
+  height: 2.5em;
+  vertical-align: middle;
+}
+
+.people-grid {
+  display: block;
+  margin-top: -1em;
+  margin-bottom: 2em;
+  text-align: center;
+}
+
+.person-card {
+  display: inline-block;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: center;
+}
+
+.person-card img {
+  width: 300px;
+  border-radius: 8px;
+}
+
+.person-card h4 {
+  font-size: 0.9em;
+  font-weight: 400;
+}
