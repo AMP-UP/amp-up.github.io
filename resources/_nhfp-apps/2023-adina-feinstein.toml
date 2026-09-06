@@ -1,0 +1,14 @@
+# applicant
+name = "Adina Feinstein"
+year = "2023"
+flavor = "Sagan"
+institution_phd = "University of Chicago"
+institution_host = "University of Colorado Boulder"
+
+# application
+title = "The Evolution of Young Exoplanet Atmospheres in the Presence of Extreme Stellar Activity"
+science_category = "Exoplanets and Habitability"
+abstract = '''
+Detecting and characterizing young planetary systems ($<100\,\mathrm{Myr}$) is essential for piecing together questions of how planets evolve, as they are a means for looking back in time to the progenitors of the older planet population. However, planets do not evolve in quiet environments. Young stars are known to have increased magnetic activity which manifests as stellar flares. It is currently unknown how flares shape the atmospheric mass-loss rates of young transiting exoplanets. I propose to study young planets and stars to understand how the early stages of planet evolution are shaped by flares. First, I will propose for novel JWST observations of young transiting exoplanets to constrain their original formation locations. Second, I will use archival HST Far-Ultraviolet (FUV) observations of young stars to constrain FUV flare rates. Third, I will use archival TESS observations of young stars to measure stellar activity cycle timescales. The results of the flare projects will be used as priors for theoretical models of atmospheric mass-loss. As a Hubble Fellow, I will implement a program that approaches this question from stellar, exoplanet, and solar astrophysics perspectives. Only by connecting these fields can we truly begin to understand the early evolution of young exoplanets.
+'''
+url = "https://drive.google.com/file/d/1xzn8S2KXesOKA-ftGXkWxOXHqYZu3trJ"
