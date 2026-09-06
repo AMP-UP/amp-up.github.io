@@ -13,11 +13,23 @@
   background-image: url("../../images/Logo2_color_white.png");
 }
 
+header.special .icon,
+header.special .icon img,
 .site-brand-image {
-  display: block;
-  width: 450px;
-  max-width: 100%;
-  margin: -80px auto 0;
+  position: static !important;
+  display: block !important;
+  width: min(60vw, 420px) !important;
+  max-width: 100% !important;
+  height: auto !important;
+  margin: 0 auto 1.25em !important;
+  left: auto !important;
+  top: auto !important;
+  float: none !important;
+  text-align: center !important;
+}
+
+.site-brand-image {
+  margin: 0 auto 1.25em !important;
 }
 
 .site-intro {
@@ -135,4 +147,54 @@
 .person-card h4 {
   font-size: 0.9em;
   font-weight: 400;
+}
+
+@media screen and (max-width: 736px) {
+  article#main header.special,
+  header.special {
+    padding-top: 1.5em !important;
+  }
+
+  article#main header.special .icon,
+  header.special .icon {
+    position: static !important;
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    left: auto !important;
+    top: auto !important;
+    margin: 0 0 1em !important;
+    float: none !important;
+    text-align: center !important;
+  }
+
+  article#main header.special .icon img,
+  .site-brand-image {
+    display: block !important;
+    width: min(82vw, 290px) !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    position: relative !important;
+  }
+
+  .site-intro {
+    margin-top: 0 !important;
+  }
+
+  #main .wrapper.style1 .row > .col-4 {
+    width: 100% !important;
+    display: block !important;
+  }
+
+  #main .wrapper.style1 .col-4 p {
+    display: block !important;
+    margin-bottom: 0 !important;
+    line-height: 1.6 !important;
+  }
+
+  #main .wrapper.style1 .col-4 .button {
+    display: block !important;
+    width: fit-content !important;
+    margin-top: 0.8em !important;
+  }
 }

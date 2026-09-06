@@ -3,7 +3,8 @@
     { href: 'index.html', label: 'Home', page: 'index' },
     { href: 'who.html', label: 'Who We Are', page: 'who' },
     { href: 'mentorship.html', label: 'What We Do', page: 'mentorship' },
-    { href: 'resources.html', label: 'Resources', page: 'resources' }
+    { href: 'resources.html', label: 'Resources', page: 'resources' },
+    { href: 'https://docs.google.com/forms/d/e/1FAIpQLSfnKzRmQcijnV6SJhno3CJpGVL9L43WxYj08SBRozsKXL7kYg/viewform', label: 'Apply', page: 'apply', buttonClass: 'button primary', external: true }
   ];
 
   function getCurrentPage() {
@@ -20,7 +21,9 @@
   function buildHeaderMarkup(currentPage) {
     var listItems = navigation.map(function(item) {
       var classes = item.page === currentPage ? 'current' : '';
-      return '<li class="' + classes + '"><a href="' + item.href + '">' + item.label + '</a></li>';
+      var linkClass = item.buttonClass ? ' class="' + item.buttonClass + '"' : '';
+      var attrs = item.external ? ' target="_blank" rel="noopener noreferrer"' : '';
+      return '<li class="' + classes + '"><a href="' + item.href + '"' + linkClass + attrs + '>' + item.label + '</a></li>';
     }).join('');
 
     var headerClass = currentPage === 'index' ? 'alt' : '';
@@ -34,7 +37,6 @@
       '  <nav id="nav" aria-label="Main navigation">',
       '    <ul>',
       '      ' + listItems,
-      '      <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfnKzRmQcijnV6SJhno3CJpGVL9L43WxYj08SBRozsKXL7kYg/viewform" class="button primary">Apply</a></li>',
       '    </ul>',
       '  </nav>',
       '</header>'
@@ -51,6 +53,37 @@
     ].join('\n');
   }
 
+  function applyLogoFix() {
+    var style = document.createElement('style');
+    style.textContent = [
+      'header.special .icon {',
+      '  position: static !important;',
+      '  display: block !important;',
+      '  width: min(60vw, 420px) !important;',
+      '  height: auto !important;',
+      '  margin: 0 auto 1.25em !important;',
+      '  left: auto !important;',
+      '  top: auto !important;',
+      '  float: none !important;',
+      '  text-align: center !important;',
+      '}',
+      'header.special .icon img, .site-brand-image {',
+      '  display: block !important;',
+      '  width: min(60vw, 420px) !important;',
+      '  max-width: 100% !important;',
+      '  height: auto !important;',
+      '  margin: 0 auto 1.25em !important;',
+      '  position: relative !important;',
+      '}',
+      '@media screen and (max-width: 736px) {',
+      '  header.special .icon, header.special .icon img, .site-brand-image {',
+      '    width: min(82vw, 290px) !important;',
+      '  }',
+      '}'
+    ].join('\n');
+    document.head.appendChild(style);
+  }
+
   function hydrateShell() {
     var headerTarget = document.getElementById('site-header');
     var footerTarget = document.getElementById('site-footer');
@@ -65,9 +98,6 @@
     }
   }
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', hydrateShell);
-  } else {
-    hydrateShell();
-  }
+  hydrateShell();
+  applyLogoFix();
 })();

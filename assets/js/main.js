@@ -33,6 +33,9 @@
 			offset: function() { return $header.height() + 10; }
 		});
 
+	if ($('#nav').length === 0)
+		return;
+
 	// Dropdowns.
 		$('#nav > ul').dropotron({
 			mode: 'fade',
