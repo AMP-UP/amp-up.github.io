@@ -106,7 +106,7 @@
                   }
 
                   function loadNhfpApps() {
-                    fetch("nhfp-apps-fragment.html")
+                    fetch("nhfp-apps/nhfp-apps-fragment.html")
                       .then(function(response) {
                         if (!response.ok) {
                           throw new Error("Unable to load the NHFP apps fragment.");
@@ -138,6 +138,13 @@
                   };
                   document.head.appendChild(mathjaxScript);
                 </script>
+
+                <p class="nhfp-download-links" style="margin-top:0.75em; margin-bottom:0;">
+                  Download as:
+                  <a href="/nhfp-apps/nhfp-apps.xlsx" download>xlsx</a>
+                  <a href="/nhfp-apps/nhfp-apps.csv" download>csv</a>
+                  <a href="/nhfp-apps/nhfp-apps.toml" download>toml</a>
+                </p>
 
                 <!-- <p>
                   <a href="https://docs.google.com/spreadsheets/d/1diDNrhjxLRvYI5ieS2zGM1aNWdO8hev_/edit?gid=1784892472#gid=1784892472">Legacy Spreadsheet of Successful NHFP applications</a>

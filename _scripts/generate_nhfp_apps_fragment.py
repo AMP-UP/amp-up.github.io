@@ -2,9 +2,25 @@
 
 from __future__ import annotations
 
+import csv
 import html
+import re
 from collections import defaultdict
 from pathlib import Path
+
+try:
+    from openpyxl import Workbook
+    from openpyxl.cell.rich_text import CellRichText, TextBlock
+    from openpyxl.cell.text import InlineFont
+    from openpyxl.styles import Alignment, Font, PatternFill
+except ImportError:  # pragma: no cover
+    Workbook = None
+    CellRichText = None
+    TextBlock = None
+    InlineFont = None
+    Alignment = None
+    Font = None
+    PatternFill = None
 
 try:
     import tomllib
@@ -14,7 +30,12 @@ except ModuleNotFoundError:  # pragma: no cover
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "resources" / "_nhfp-apps"
-OUTPUT_PATH = ROOT / "nhfp-apps-fragment.html"
+OUTPUT_DIR = ROOT / "nhfp-apps"
+OUTPUT_DIR.mkdir(exist_ok=True)
+OUTPUT_PATH = OUTPUT_DIR / "nhfp-apps-fragment.html"
+OUTPUT_CSV_PATH = OUTPUT_DIR / "nhfp-apps.csv"
+OUTPUT_XLSX_PATH = OUTPUT_DIR / "nhfp-apps.xlsx"
+OUTPUT_TOML_PATH = OUTPUT_DIR / "nhfp-apps.toml"
 
 INSTITUTION_ABBREVIATIONS = {
     "California Institute of Technology": "Caltech",
@@ -140,6 +161,51 @@ def category_label(value):
     return category if category in SCIENCE_CATEGORIES else "Unspecified"
 
 
+def hsl_to_hex(hsl_value):
+    match = re.match(r"hsl\(\s*(\d+(?:\.\d+)?)\s+(\d+(?:\.\d+)?)%\s+(\d+(?:\.\d+)?)%\s*\)", hsl_value)
+    if not match:
+        return "#FFFFFF"
+    h, s, l = [float(value) for value in match.groups()]
+    s /= 100.0
+    l /= 100.0
+    c = (1 - abs(2 * l - 1)) * s
+    x = c * (1 - abs((h / 60.0) % 2 - 1))
+    m = l - c / 2
+    if 0 <= h < 60:
+        r, g, b = c, x, 0
+    elif 60 <= h < 120:
+        r, g, b = x, c, 0
+    elif 120 <= h < 180:
+        r, g, b = 0, c, x
+    elif 180 <= h < 240:
+        r, g, b = 0, x, c
+    elif 240 <= h < 300:
+        r, g, b = x, 0, c
+    else:
+        r, g, b = c, 0, x
+    return "#{:02X}{:02X}{:02X}".format(int(round((r + m) * 255)), int(round((g + m) * 255)), int(round((b + m) * 255)))
+
+
+def format_toml_string(value):
+    text = str(value or "")
+    escaped = text.replace("\\", "\\\\").replace('"', '\\"').replace("\n", "\\n")
+    return f'"{escaped}"'
+
+
+def build_rich_name_cell(name, flavor):
+    if not name:
+        name = "(unnamed fellow)"
+    flavor_text = normalize_whitespace(flavor or "")
+    if flavor_text.lower() in {"nan", "n/a", "na", "none", "unknown"}:
+        return name
+    return CellRichText([
+        TextBlock(font=InlineFont(color="000000"), text=name),
+        TextBlock(font=InlineFont(color="000000"), text=" ("),
+        TextBlock(font=InlineFont(color=flavor_color(flavor_text).lstrip("#")), text=flavor_text),
+        TextBlock(font=InlineFont(color="000000"), text=")"),
+    ])
+
+
 def build_fragment(apps):
     grouped = defaultdict(list)
     for app in apps:
@@ -230,10 +296,108 @@ def build_fragment(apps):
     return "\n".join(html_lines)
 
 
+def write_csv(apps):
+    rows = []
+    for app in apps:
+        name = normalize_whitespace(app.get("name") or "")
+        year = normalize_whitespace(app.get("year") or "")
+        category = category_label(app.get("science_category"))
+        title = title_or_placeholder(app)
+        link = normalize_whitespace(app.get("url") or "")
+        rows.append([name, year, category, title, link])
+
+    with OUTPUT_CSV_PATH.open("w", encoding="utf-8", newline="") as fh:
+        writer = csv.writer(fh)
+        writer.writerow(["fellow", "year", "category", "title", "link"])
+        writer.writerows(rows)
+
+
+def write_toml(apps):
+    lines = []
+    for app in apps:
+        lines.append("[[apps]]")
+        lines.append(f'name = {format_toml_string(normalize_whitespace(app.get("name") or ""))}')
+        lines.append(f'year = {format_toml_string(normalize_whitespace(app.get("year") or ""))}')
+        lines.append(f'category = {format_toml_string(category_label(app.get("science_category")))}')
+        lines.append(f'title = {format_toml_string(title_or_placeholder(app))}')
+        lines.append(f'flavor = {format_toml_string(normalize_whitespace(app.get("flavor") or ""))}')
+        lines.append(f'institution_phd = {format_toml_string(normalize_whitespace(app.get("institution_phd") or ""))}')
+        lines.append(f'institution_host = {format_toml_string(abbreviate_institution(app.get("institution_host") or ""))}')
+        lines.append(f'abstract = {format_toml_string(normalize_whitespace(app.get("abstract") or ""))}')
+        lines.append(f'url = {format_toml_string(normalize_whitespace(app.get("url") or ""))}')
+        lines.append("")
+    OUTPUT_TOML_PATH.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
+
+
+def write_xlsx(apps):
+    if Workbook is None or CellRichText is None or TextBlock is None or Alignment is None or Font is None or PatternFill is None:
+        raise RuntimeError("openpyxl is required for Excel export.")
+
+    category_colors = {
+        "All": ("hsl(0 0% 88%)", "#1b1b1b", "hsl(0 0% 96%)"),
+        "Compact Objects and Accretion": ("hsl(220 76% 88%)", "#1b1b1b", "hsl(220 76% 96%)"),
+        "Exoplanet Formation and Protoplanetary Disks": ("hsl(320 60% 88%)", "#1b1b1b", "hsl(320 60% 96%)"),
+        "Exoplanets and Habitability": ("hsl(340 80% 88%)", "#1b1b1b", "hsl(340 80% 96%)"),
+        "Galaxies and the Intergalactic Medium": ("hsl(120 60% 88%)", "#1b1b1b", "hsl(120 60% 96%)"),
+        "Gravitational Wave Astrophysics": ("hsl(270 60% 88%)", "#1b1b1b", "hsl(270 60% 96%)"),
+        "Physics and Cosmology": ("hsl(28 45% 88%)", "#1b1b1b", "hsl(28 45% 96%)"),
+        "Stellar Physics": ("hsl(55 90% 88%)", "#1b1b1b", "hsl(55 90% 96%)"),
+        "The Milky Way and Resolved Stellar Populations": ("hsl(190 60% 88%)", "#1b1b1b", "hsl(190 60% 96%)"),
+    }
+
+    wb = Workbook()
+    ws = wb.active
+    ws.title = "NHFP Applications"
+    ws.freeze_panes = "A2"
+    headers = ["fellow", "year", "category", "application"]
+    ws.append(headers)
+
+    for header_cell in ws[1]:
+        header_cell.font = Font(bold=True, color="000000")
+        header_cell.fill = PatternFill("solid", fgColor="D9D9D9")
+        header_cell.alignment = Alignment(horizontal="center")
+
+    for row_idx, app in enumerate(apps, start=2):
+        name = normalize_whitespace(app.get("name") or "")
+        year = normalize_whitespace(app.get("year") or "")
+        category = category_label(app.get("science_category"))
+        title = title_or_placeholder(app)
+        app_link = normalize_whitespace(app.get("url") or "")
+        flavor = normalize_whitespace(app.get("flavor") or "")
+        fill_color = hsl_to_hex(category_colors.get(category, ("hsl(0 0% 96%)", "#1b1b1b", "hsl(0 0% 96%)"))[2])
+        fill = PatternFill("solid", fgColor=fill_color.lstrip("#"))
+        for col_idx in range(1, 5):
+            ws.cell(row=row_idx, column=col_idx).fill = fill
+            ws.cell(row=row_idx, column=col_idx).alignment = Alignment(vertical="top")
+
+        ws.cell(row=row_idx, column=1, value=build_rich_name_cell(name, flavor))
+        ws.cell(row=row_idx, column=2, value=year)
+        ws.cell(row=row_idx, column=3, value=category)
+        title_cell = ws.cell(row=row_idx, column=4, value=title)
+        title_cell.font = Font(italic=True)
+        if app_link:
+            title_cell.hyperlink = app_link
+            title_cell.style = "Hyperlink"
+            title_cell.font = Font(italic=True, underline="single", color="0563C1")
+
+    for column_cells in ws.columns:
+        length = max(len(str(cell.value)) if cell.value is not None else 0 for cell in column_cells)
+        ws.column_dimensions[column_cells[0].column_letter].width = min(max(length + 2, 12), 80)
+
+    ws.sheet_view.showGridLines = False
+    wb.save(OUTPUT_XLSX_PATH)
+
+
 def main():
     apps = load_apps()
     OUTPUT_PATH.write_text(build_fragment(apps) + "\n", encoding="utf-8")
+    write_csv(apps)
+    write_toml(apps)
+    write_xlsx(apps)
     print(f"Wrote {len(apps)} NHFP applications to {OUTPUT_PATH}")
+    print(f"Wrote CSV to {OUTPUT_CSV_PATH}")
+    print(f"Wrote TOML to {OUTPUT_TOML_PATH}")
+    print(f"Wrote XLSX to {OUTPUT_XLSX_PATH}")
 
 
 if __name__ == "__main__":
