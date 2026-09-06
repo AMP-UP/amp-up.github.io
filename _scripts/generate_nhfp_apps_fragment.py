@@ -335,7 +335,7 @@ def write_toml(apps):
         lines.append(f'title = {format_toml_value(title_or_placeholder(app))}')
         lines.append(f'flavor = {format_toml_value(normalize_whitespace(app.get("flavor") or ""))}')
         lines.append(f'institution_phd = {format_toml_value(normalize_whitespace(app.get("institution_phd") or ""))}')
-        lines.append(f'institution_host = {format_toml_value(abbreviate_institution(app.get("institution_host") or ""))}')
+        lines.append(f'institution_host = {format_toml_value(normalize_whitespace(app.get("institution_host") or ""))}')
         lines.append(f'abstract = {format_toml_value(normalize_whitespace(app.get("abstract") or ""))}')
         lines.append(f'url = {format_toml_value(normalize_whitespace(app.get("url") or ""))}')
         lines.append("")
