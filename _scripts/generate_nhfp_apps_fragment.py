@@ -186,8 +186,21 @@ def hsl_to_hex(hsl_value):
     return "#{:02X}{:02X}{:02X}".format(int(round((r + m) * 255)), int(round((g + m) * 255)), int(round((b + m) * 255)))
 
 
-def format_toml_string(value):
-    text = str(value or "")
+def format_toml_value(value):
+    if value is None:
+        return '""'
+    text = str(value).strip()
+    if text.lower() in {"nan", "n/a", "na", "none"}:
+        return "nan"
+    if text == "":
+        return '""'
+    if text.lower() in {"true", "false"}:
+        return text.lower()
+    try:
+        if text.replace(".", "", 1).replace("-", "", 1).isdigit():
+            return text
+    except Exception:
+        pass
     escaped = text.replace("\\", "\\\\").replace('"', '\\"').replace("\n", "\\n")
     return f'"{escaped}"'
 
@@ -316,15 +329,15 @@ def write_toml(apps):
     lines = []
     for app in apps:
         lines.append("[[apps]]")
-        lines.append(f'name = {format_toml_string(normalize_whitespace(app.get("name") or ""))}')
-        lines.append(f'year = {format_toml_string(normalize_whitespace(app.get("year") or ""))}')
-        lines.append(f'category = {format_toml_string(category_label(app.get("science_category")))}')
-        lines.append(f'title = {format_toml_string(title_or_placeholder(app))}')
-        lines.append(f'flavor = {format_toml_string(normalize_whitespace(app.get("flavor") or ""))}')
-        lines.append(f'institution_phd = {format_toml_string(normalize_whitespace(app.get("institution_phd") or ""))}')
-        lines.append(f'institution_host = {format_toml_string(abbreviate_institution(app.get("institution_host") or ""))}')
-        lines.append(f'abstract = {format_toml_string(normalize_whitespace(app.get("abstract") or ""))}')
-        lines.append(f'url = {format_toml_string(normalize_whitespace(app.get("url") or ""))}')
+        lines.append(f'name = {format_toml_value(normalize_whitespace(app.get("name") or ""))}')
+        lines.append(f'year = {format_toml_value(normalize_whitespace(app.get("year") or ""))}')
+        lines.append(f'category = {format_toml_value(category_label(app.get("science_category")))}')
+        lines.append(f'title = {format_toml_value(title_or_placeholder(app))}')
+        lines.append(f'flavor = {format_toml_value(normalize_whitespace(app.get("flavor") or ""))}')
+        lines.append(f'institution_phd = {format_toml_value(normalize_whitespace(app.get("institution_phd") or ""))}')
+        lines.append(f'institution_host = {format_toml_value(abbreviate_institution(app.get("institution_host") or ""))}')
+        lines.append(f'abstract = {format_toml_value(normalize_whitespace(app.get("abstract") or ""))}')
+        lines.append(f'url = {format_toml_value(normalize_whitespace(app.get("url") or ""))}')
         lines.append("")
     OUTPUT_TOML_PATH.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
 
@@ -374,11 +387,13 @@ def write_xlsx(apps):
         ws.cell(row=row_idx, column=2, value=year)
         ws.cell(row=row_idx, column=3, value=category)
         title_cell = ws.cell(row=row_idx, column=4, value=title)
+        title_cell.fill = fill
         title_cell.font = Font(italic=True)
         if app_link:
             title_cell.hyperlink = app_link
             title_cell.style = "Hyperlink"
             title_cell.font = Font(italic=True, underline="single", color="0563C1")
+            title_cell.fill = fill
 
     for column_cells in ws.columns:
         length = max(len(str(cell.value)) if cell.value is not None else 0 for cell in column_cells)
