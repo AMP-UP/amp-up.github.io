@@ -1,0 +1,14 @@
+# applicant
+name = "Lindsey Kwok"
+year = "2025"
+flavor = "Hubble"
+institution_phd = "Rutgers University"
+institution_host = "Northwestern University"
+
+# application
+title = "Determining the Astrophysical Origins of White-Dwarf Supernovae with JWST Infrared Spectroscopy"
+science_category = "Stellar Physics"
+abstract = '''
+Type Ia supernovae (SN Ia) are thermonuclear explosions of white dwarfs (WD) with far-reaching implications for cosmology, stellar evolution, galactic feedback, and the origin of the elements. Despite their outsized impact and decades of research on optical data, we lack a detailed understanding of the progenitor and explosion scenarios that give rise to both normal SN Ia and the growing population of peculiar white-dwarf supernova (WDSN) subclasses. Recently, JWST opened a new window to the mid-infrared (MIR), where isolated spectral lines from previously inaccessible elements and ions are decisively distinguishing between progenitor and explosion models. As a NASA Hubble Fellow, I will investigate the previously unexplored MIR evolution of both normal and peculiar WDSN from early to late times using upcoming data from my JWST program (GO 5232; PI: Kwok). I will unveil their panchromatic (optical+NIR+MIR) spectral evolution to constrain their ejecta properties and strongly test models for their origins. With the growing sample of JWST WDSN observations, I will correlate their MIR spectral signatures with optical properties to gain novel insights from the population as a whole. My proposed research will leverage the power of JWST to illuminate the astrophysical origins of WDSN throughout the thermonuclear zoo.
+'''
+url = "https://drive.google.com/file/d/1G6zKNxKBe550FU6R04_WQdQvOK7QkBr8"
