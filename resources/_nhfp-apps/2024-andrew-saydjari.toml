@@ -1,0 +1,12 @@
+# applicant
+name = "Andrew Saydjari"
+year = "2024"
+flavor = "Hubble"
+institution_phd = "Harvard University"
+institution_host = "Princeton University"
+
+# application
+title = "Inferring Kinematic and Chemical Maps of Galactic Dust"
+science_category = "The Milky Way and Resolved Stellar Populations"
+abstract = nan
+url = "https://drive.google.com/file/d/1RyzZ5nH2HCjOkuSrZZHe1axwe2QdFjDn"

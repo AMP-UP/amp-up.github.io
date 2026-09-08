@@ -1,0 +1,14 @@
+# applicant
+name = "Maggie Thompson"
+year = "2023"
+flavor = "Hubble"
+institution_phd = "University of California, Santa Cruz"
+institution_host = "Carnegie Institution for Science's Earth and Planets Laboratory"
+
+# application
+title = "To Explore Strange New Worlds: Connecting the Interiors and Atmospheres of Rocky Exoplanets"
+science_category = "Exoplanets and Habitability"
+abstract = '''
+As exoplanet research is beginning to probe the physics and chemistry of terrestrial exoplanets, some of the most characterizable rocky worlds of the coming decades are magma planets that are covered by extensive surface lava or magma oceans. To ensure that upcoming observations are properly interpreted, we need comprehensive theoretical tools, informed by experimental data, to model the diversity of these magma exoplanets and their atmospheres. However, all models are currently limited by insufficiencies in laboratory data, particularly in measurements of the chemical properties of exoplanet analogs with compositions unlike modern Earth's at high temperature and pressure conditions. As a NASA Hubble Fellow, I propose to fill this significant gap in exoplanet science by providing new experimental constraints on the chemical compositions of exoplanet analogs and incorporating these findings into a coupled interior-atmosphere model. First, I will experimentally measure carbon and nitrogen's solubilities in diverse exoplanetary melts as a function of temperature, pressure and redox state to supply fundamental constraints on how volatiles partition between the interior, surficial, and atmospheric reservoirs of this class of exoplanets. Second, I will incorporate these measurements into a coupled interior-atmosphere climate model to answer important questions about the chemistry of hot, rocky exoplanets.
+'''
+url = "https://drive.google.com/file/d/1wfBQR3gzi7b6v7EccH1OgP7ojIAMVRDo"
