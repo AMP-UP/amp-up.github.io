@@ -10,6 +10,17 @@ abstract = nan
 url = "https://drive.google.com/file/d/1sEElvNIvgUgDpVb8bMnPImzSaQmKBD8a"
 
 [[apps]]
+name = "Jared Goldberg"
+year = 2026
+category = "Stellar Physics"
+title = "Massive stars, Inside and Out: Bridging 1D and 3D models of Stars and Supernovae"
+flavor = "Hubble"
+institution_phd = "University of California, Santa Barbara"
+institution_host = "Columbia University"
+abstract = "Massive stars ($\\gtrsim10M_\\odot$) are central to nearly all of astrophysics, through their dynamic lives and often-explosive ends. While a star’s deep interior properties determine its fate, its highly-variable outer envelope mediates everything we observe. With the abundance of data from time-domain NASA missions including TESS, UVEX, and ULTRASAT, and wide-field instruments such as Roman, theory across scales is needed to extract physical insights and realize the data’s full scientific potential. Luckily, 3D radiation-hydrodynamics (RHD) simulations are now achieving sufficient computational capacity to capture large-scale flows in tenuous massive star envleopes. Likewise, breakthroughs in convective boundary mixing and binary interaction are on the precipice of being translated into full grids of evolutionary models. Using the 1D open-source stellar evolution code MESA in tandem with the 3D Radiation-hydrodynamics instrument Athena++, I will leverage these advances to create two vital state-of-the-art open-source suites of massive star models: one from 1D multi-physics stellar evolution, and one from 3D RHD simulations of full stellar envelopes. These models will unveil the crucial physical dependencies of large-scale convection and the final stages of stellar mass loss, create a foundation for future numerical experiments, and bear insights via comparison to the growing wealth of spatially- and temporally-resolved observations."
+url = "https://drive.google.com/file/d/10nfSM8IAOzle-vHPzt0CWRWsnOnlcGdo"
+
+[[apps]]
 name = "Nicholas Rui"
 year = 2025
 category = "Stellar Physics"
@@ -30,6 +41,17 @@ institution_phd = "Rutgers University"
 institution_host = "Northwestern University"
 abstract = "Type Ia supernovae (SN Ia) are thermonuclear explosions of white dwarfs (WD) with far-reaching implications for cosmology, stellar evolution, galactic feedback, and the origin of the elements. Despite their outsized impact and decades of research on optical data, we lack a detailed understanding of the progenitor and explosion scenarios that give rise to both normal SN Ia and the growing population of peculiar white-dwarf supernova (WDSN) subclasses. Recently, JWST opened a new window to the mid-infrared (MIR), where isolated spectral lines from previously inaccessible elements and ions are decisively distinguishing between progenitor and explosion models. As a NASA Hubble Fellow, I will investigate the previously unexplored MIR evolution of both normal and peculiar WDSN from early to late times using upcoming data from my JWST program (GO 5232; PI: Kwok). I will unveil their panchromatic (optical+NIR+MIR) spectral evolution to constrain their ejecta properties and strongly test models for their origins. With the growing sample of JWST WDSN observations, I will correlate their MIR spectral signatures with optical properties to gain novel insights from the population as a whole. My proposed research will leverage the power of JWST to illuminate the astrophysical origins of WDSN throughout the thermonuclear zoo."
 url = "https://drive.google.com/file/d/1G6zKNxKBe550FU6R04_WQdQvOK7QkBr8"
+
+[[apps]]
+name = "Kenzie Nimmo"
+year = 2025
+category = "Compact Objects and Accretion"
+title = "From Glimmering Jewels to Cosmic Ubiquity: Unraveling the Origins of FRBs"
+flavor = "Einstein"
+institution_phd = "University of Amsterdam"
+institution_host = "Northwestern University"
+abstract = nan
+url = "https://drive.google.com/file/d/1TJxt2Hf5P8wrvQaV-usf9jOvCrPPEy-Y"
 
 [[apps]]
 name = "Jaren Ashcraft"

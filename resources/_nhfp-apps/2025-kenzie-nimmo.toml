@@ -1,0 +1,12 @@
+# applicant
+name = "Kenzie Nimmo"
+year = "2025"
+flavor = "Einstein"
+institution_phd = "University of Amsterdam"
+institution_host = "Northwestern University"
+
+# application
+title = "From Glimmering Jewels to Cosmic Ubiquity: Unraveling the Origins of FRBs"
+science_category = "Compact Objects and Accretion"
+abstract = nan
+url = "https://drive.google.com/file/d/1TJxt2Hf5P8wrvQaV-usf9jOvCrPPEy-Y"
