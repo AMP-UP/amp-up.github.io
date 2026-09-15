@@ -1,0 +1,12 @@
+# applicant
+name = "Emily Griffith"
+year = "2025"
+flavor = "Hubble"
+institution_phd = "The Ohio State University"
+institution_host = "University of Colorado Boulder"
+
+# application
+title = "Beyond Mg and Fe: Exploring Detailed Nucleosynthetic Patterns"
+science_category = "The Milky Way and Resolved Stellar Populations"
+abstract = nan
+url = "https://drive.google.com/file/d/14n6ljMl_bcztgWNEfXJt0EhdYH2-ukpv"
