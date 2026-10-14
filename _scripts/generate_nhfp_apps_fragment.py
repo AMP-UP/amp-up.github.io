@@ -67,6 +67,7 @@ INSTITUTION_ABBREVIATIONS = {
     "Yale University": "Yale",
     "Johns Hopkins University": "Johns Hopkins",
     "Stony Brook University": "Stony Brook",
+    "University of Illinois Urbana-Champaign": "UIUC",
     "Carnegie Institution for Science's Earth and Planets Laboratory": "Carnegie Science EPL",
 }
 

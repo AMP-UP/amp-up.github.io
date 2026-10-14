@@ -1,0 +1,12 @@
+# applicant
+name = "Viraj Karambelkar"
+year = "2025"
+flavor = "Hubble"
+institution_phd = "California Institute of Technology"
+institution_host = "Columbia University"
+
+# application
+title = "The Anthropology of Merging Stars"
+science_category = "Stellar Physics"
+abstract = nan
+url = "https://drive.google.com/file/d/10kSQ3VKvz6nwII85tR2aN7K93e1bTNYj"

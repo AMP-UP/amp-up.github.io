@@ -1,0 +1,14 @@
+# applicant
+name = "Jason Hinkle"
+year = "2025"
+flavor = "Einstein"
+institution_phd = "University of Hawaii"
+institution_host = "University of Illinois Urbana-Champaign"
+
+# application
+title = "Nuclear Transients in the Golden Era of Time-Domain Astronomy"
+science_category = "Compact Objects and Accretion"
+abstract = '''
+Optical transient surveys have ushered in the golden era of time-domain astronomy and exposed an unexpected breadth of transient phenomena, including nuclear transients: flares powered by accretion onto supermassive black holes (SMBHs). Nuclear transients, like tidal disruption events (TDEs) and ambiguous nuclear transients (ANTs), are poised as excellent probes of otherwise quiescent SMBHs, but observational diversity and small sample sizes have stalled this goal. The landscape of time-domain astronomy will soon expand dramatically, with the first light of the Legacy Survey of Space and Time (LSST) next year and the launch of the Roman Space Telescope shortly after. As an NHFP Fellow, I propose to leverage these revolutionary astrophysics missions to expand the viability of nuclear transients as probes of SMBHs, targeting several key opportunities to establish observational trends and inform theoretical models. I will access the earliest phases of TDEs through observations of repeating partial TDEs and double the number of TDEs and ANTs with analyzed UV spectra. Using the depth of LSST and Roman, I will extend transient probes of SMBHs to lower and higher masses. These studies will cement nuclear transients as reliable probes of SMBHs across a wide range of masses and redshifts.
+'''
+url = "https://drive.google.com/file/d/1Akmrx3J-UZOP54bLUAHvmeymml8v7Lfe"
